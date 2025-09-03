@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import { FaDownload, FaGraduationCap, FaMusic, FaFutbol, FaPeace } from "react-icons/fa";
+---
+
+<Layout>
+  <section class="max-w-5xl mx-auto pt-20 p-6">
+    <h1 class="text-5xl md:text-6xl font-bold text-center mb-6 dark:text-white">
+      Propuestas
+    </h1>
+
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+      Aquí encontrarás las principales propuestas para construir una Bucaramanga con
+      educación, empleo digno, paz, inclusión, cultura y deporte para la juventud.
+    </p>
+
+    <!-- Secciones -->
+    <div class="space-y-12">
+      <!-- Educación y Trabajo Digno -->
+      <div class="flex flex-col gap-4 p-6 bg-blue-50 dark:bg-blue-900 rounded-2xl shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <FaGraduationCap class="text-blue-600 dark:text-blue-300 text-2xl" />
+          <h2 class="text-2xl font-semibold dark:text-white">Educación y Trabajo Digno</h2>
+        </div>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li>Reducir la brecha en el acceso a la educación pública superior.</li>
+          <li>Impulsar PreICFES populares y de calidad financiados por la alcaldía.</li>
+          <li>Gestionar más cupos en la UIS y UTS con apoyo de otros Consejos de Juventud.</li>
+          <li>Formalización del empleo juvenil con políticas locales.</li>
+        </ul>
+      </div>
+
+      <!-- Cultura y Deporte -->
+      <div class="flex flex-col gap-4 p-6 bg-purple-50 dark:bg-purple-900 rounded-2xl shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <FaMusic class="text-purple-600 dark:text-purple-300 text-2xl" />
+          <FaFutbol class="text-purple-600 dark:text-purple-300 text-2xl" />
+          <h2 class="text-2xl font-semibold dark:text-white">Cultura y Deporte</h2>
+        </div>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li>Fomentar el acceso gratuito a la formación cultural y artística.</li>
+          <li>Crear programas deportivos barriales con apoyo de la alcaldía.</li>
+        </ul>
+      </div>
+
+      <!-- Participación y Paz -->
+      <div class="flex flex-col gap-4 p-6 bg-green-50 dark:bg-green-900 rounded-2xl shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <FaPeace class="text-green-600 dark:text-green-300 text-2xl" />
+          <h2 class="text-2xl font-semibold dark:text-white">Participación y Paz</h2>
+        </div>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li>Fortalecer los espacios juveniles de participación democrática.</li>
+          <li>Impulsar programas de reconciliación, memoria y paz territorial.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Botón descarga -->
+    <div class="flex justify-center mt-12">
+      <a
+        href="/propuestas.pdf"
+        download
+        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-2xl shadow-md hover:bg-blue-700 transition"
+      >
+        <FaDownload class="text-lg" />
+        Descargar Propuestas
+      </a>
+    </div>
+  </section>
+</Layout>

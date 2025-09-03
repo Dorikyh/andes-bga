@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply w-full h-full min-h-screen bg-white dark:bg-gray-950 overflow-x-hidden;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+/* === Anti FOLM (Flash of Light Mode) === */
+html { color-scheme: light dark; } /* habilita ambos, se concreta con .dark arriba */
+html.dark { color-scheme: dark; }
+
+/* Candado de transiciones/animaciones mientras se resuelve el tema en el primer frame */
+.no-theme-transition *,
+.no-theme-transition *::before,
+.no-theme-transition *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: fade 0.25s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* forced theme variables para evitar flashes si alguna hoja de la nueva página
+   resetea estilos. No interfiere con tus clases Tailwind; solo garantiza
+   fondo y texto base coherentes con html.dark */
+:root {
+  --site-bg: #ffffff;
+  --site-text: #111827;
+}
+html.dark {
+  --site-bg: #0f172a;
+  --site-text: #f3f4f6;
+}
+
+/* aplica variables a las capas base (esto se notará inmediatamente) */
+html, body {
+  background-color: var(--site-bg);
+  color: var(--site-text);
+}
+
+/* helper para forzar repintado momentáneo */
+.theme-refresh {
+  transform: translateZ(0);
+}
+
+.no-theme-transition *, 
+.no-theme-transition *::before, 
+.no-theme-transition *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
