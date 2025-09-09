@@ -76,11 +76,11 @@ import FAQItem from "../components/FAQ.jsx";
             <div class="text-sm text-gray-300">Estudiantes activos</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-secondary">15+</div>
+            <div class="text-3xl font-bold text-primary">5</div>
             <div class="text-sm text-gray-300">Colegios aliados</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-green-400">8</div>
+            <div class="text-3xl font-bold text-primary">31</div>
             <div class="text-sm text-gray-300">Años de lucha</div>
           </div>
         </div>
@@ -110,14 +110,19 @@ import FAQItem from "../components/FAQ.jsx";
     </div>
   </section>
 
-  <!-- SECCIÓN: ¿QUÉ ES ANDES? -->
-  <section id="about" class="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-slate-800 relative overflow-hidden">
-    <!-- Background decorativo -->
-    <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 right-20 w-40 h-40 bg-secondary rounded-full blur-3xl"></div>
-    </div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="text-center mb-16 animate-on-scroll">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6
+  <!-- SECCIÓN: FAQ -->
+  <section id="faq" class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Preguntas Frecuentes</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">Resolvemos algunas dudas comunes sobre nuestro movimiento estudiantil.</p>
+      </div>
+
+      <div class="space-y-6">
+        <FAQItem client:load question="¿Quiénes pueden unirse a ANDES?" answer="Todos los estudiantes de secundaria y jóvenes interesados en defender la educación pública pueden ser parte." />
+        <FAQItem client:load question="¿Qué actividades realizan?" answer="Desde asambleas estudiantiles, talleres de formación, hasta movilizaciones por los derechos educativos." />
+        <FAQItem client:load question="¿Cómo puedo participar activamente?" answer="Puedes unirte a tu comité local de ANDES o escribirnos directamente para organizar actividades en tu colegio." />
+      </div>
+    </div>
+  </section>

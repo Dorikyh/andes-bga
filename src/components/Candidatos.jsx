@@ -160,16 +160,12 @@ export default function Candidatos() {
         {/* Stats */}
         <div className="flex justify-center items-center gap-8 mt-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary">{candidatos.reduce((acc, city) => acc + city.personas.length, 0)}</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Candidatos</div>
+            <div className="text-4xl font-bold text-primary">{candidatos.reduce((acc, city) => acc + city.personas.length, 0)}</div>
+            <div className="text-md text-gray-500 dark:text-gray-400">Candidatos</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-secondary">2</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Ciudades</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600">100%</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Comprometidos</div>
+            <div className="text-4xl font-bold text-secondary">2</div>
+            <div className="text-md text-gray-500 dark:text-gray-400">Ciudades</div>
           </div>
         </div>
       </motion.div>
@@ -219,10 +215,7 @@ export default function Candidatos() {
               {/* Background Gradient */}
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${candidatosActivos.color}`} />
               
-              {/* Specialty Badge */}
-              <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full text-xs font-semibold text-gray-600 dark:text-gray-300 shadow-md">
-                {candidato.especialidad}
-              </div>
+
 
               <div className="relative z-10 flex flex-col items-center text-center h-full">
                 {/* Profile Image */}
@@ -403,32 +396,7 @@ export default function Candidatos() {
         </motion.div>
       )}
 
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-center bg-gradient-to-r from-primary via-secondary to-purple-600 rounded-3xl p-12 text-white mb-16"
-      >
-        <h2 className="text-4xl font-bold mb-4">¿Listo para conocer más?</h2>
-        <p className="text-xl mb-8 opacity-90">
-          Únete a nosotros y sé parte del cambio que nuestra juventud necesita
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="https://chat.whatsapp.com/HMRPmy1mlD88tbhSI1oZBD"
-            className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors transform hover:scale-105 shadow-lg"
-          >
-            Únete al WhatsApp
-          </a>
-          <a
-            href="/propuestas"
-            className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-colors transform hover:scale-105"
-          >
-            Ver Propuestas
-          </a>
-        </div>
-      </motion.div>
+
     </div>
   );
 }

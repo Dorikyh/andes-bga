@@ -54,7 +54,7 @@ import { ClientRouter } from 'astro:transitions';
     </script>
   </head>
 
-  <body class="h-full min-h-screen bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-gray-100 overflow-x-hidden overflow-y-auto flex flex-col">
+  <body class="h-full min-h-screen bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 overflow-x-hidden overflow-y-auto flex flex-col">
     <div class="no-theme-transition">
       <NavBar client:load transition:persist />
     </div>
@@ -75,6 +75,8 @@ import { ClientRouter } from 'astro:transitions';
       <div class="hidden md:w-1/6" />
     </main>
 
+
+    
     <div class="no-theme-transition">
       <Footer />
     </div>

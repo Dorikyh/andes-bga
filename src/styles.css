@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply w-full h-full min-h-screen bg-white dark:bg-gray-950 overflow-x-hidden;
+  @apply w-full h-full min-h-screen bg-white dark:bg-neutral-950 overflow-x-hidden;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
