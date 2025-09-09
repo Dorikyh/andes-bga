@@ -138,7 +138,7 @@ useEffect(() => {
           </div>
 
           <a
-            href="https://chat.whatsapp.com/HMRPmy1mlD88tbloZBD"
+            href="https://chat.whatsapp.com/HMRPmy1mlD88tbhSI1oZBD"
             className="hidden md:inline-flex items-center gap-2 bg-primary text-white font-bold px-3 py-2 rounded-lg shadow-sm hover:brightness-95 transition"
           >
             <UserPlus width={16} height={16} strokeWidth={2.2} />

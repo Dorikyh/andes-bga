@@ -1,71 +1,116 @@
 ---
 import Layout from "../layouts/MainLayout.astro";
-import { FaDownload, FaGraduationCap, FaMusic, FaFutbol, FaPeace } from "react-icons/fa";
+import { 
+  FaFileAlt, FaGraduationCap, FaMusic, FaFutbol, FaPeace, FaHandsHelping, FaFemale, FaGlobeAmericas 
+} from "react-icons/fa";
 ---
 
 <Layout>
-  <section class="max-w-5xl mx-auto pt-20 p-6">
+  <section class="max-w-6xl mx-auto pt-20 px-6">
     <h1 class="text-5xl md:text-6xl font-bold text-center mb-6 dark:text-white">
-      Propuestas
+      Propuestas y Plan de Trabajo
     </h1>
 
-    <p class="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-      Aquí encontrarás las principales propuestas para construir una Bucaramanga con
-      educación, empleo digno, paz, inclusión, cultura y deporte para la juventud.
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+      Nuestro Plan de Trabajo busca transformar Bucaramanga, priorizando educación, empleo digno, participación juvenil, paz, inclusión, cultura y deporte.
     </p>
 
-    <!-- Secciones -->
-    <div class="space-y-12">
-      <!-- Educación y Trabajo Digno -->
-      <div class="flex flex-col gap-4 p-6 bg-blue-50 dark:bg-blue-900 rounded-2xl shadow-md">
-        <div class="flex items-center gap-3 mb-4">
-          <FaGraduationCap class="text-blue-600 dark:text-blue-300 text-2xl" />
-          <h2 class="text-2xl font-semibold dark:text-white">Educación y Trabajo Digno</h2>
-        </div>
-        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Reducir la brecha en el acceso a la educación pública superior.</li>
-          <li>Impulsar PreICFES populares y de calidad financiados por la alcaldía.</li>
-          <li>Gestionar más cupos en la UIS y UTS con apoyo de otros Consejos de Juventud.</li>
-          <li>Formalización del empleo juvenil con políticas locales.</li>
-        </ul>
-      </div>
-
-      <!-- Cultura y Deporte -->
-      <div class="flex flex-col gap-4 p-6 bg-purple-50 dark:bg-purple-900 rounded-2xl shadow-md">
-        <div class="flex items-center gap-3 mb-4">
-          <FaMusic class="text-purple-600 dark:text-purple-300 text-2xl" />
-          <FaFutbol class="text-purple-600 dark:text-purple-300 text-2xl" />
-          <h2 class="text-2xl font-semibold dark:text-white">Cultura y Deporte</h2>
-        </div>
-        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Fomentar el acceso gratuito a la formación cultural y artística.</li>
-          <li>Crear programas deportivos barriales con apoyo de la alcaldía.</li>
-        </ul>
-      </div>
-
-      <!-- Participación y Paz -->
-      <div class="flex flex-col gap-4 p-6 bg-green-50 dark:bg-green-900 rounded-2xl shadow-md">
-        <div class="flex items-center gap-3 mb-4">
-          <FaPeace class="text-green-600 dark:text-green-300 text-2xl" />
-          <h2 class="text-2xl font-semibold dark:text-white">Participación y Paz</h2>
-        </div>
-        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Fortalecer los espacios juveniles de participación democrática.</li>
-          <li>Impulsar programas de reconciliación, memoria y paz territorial.</li>
-        </ul>
-      </div>
+    <!-- Botón documento -->
+    <div class="flex justify-center mb-12">
+      <a
+        href="https://drive.google.com/file/d/1-2jqcHMZv1oE7nz_KTcKcuxEtXji6jH4/view"
+        class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105"
+      >
+        <FaFileAlt class="text-lg" />
+        Ver documento completo
+      </a>
     </div>
 
-    <!-- Botón descarga -->
-    <div class="flex justify-center mt-12">
-      <a
-        href="/propuestas.pdf"
-        download
-        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-2xl shadow-md hover:bg-blue-700 transition"
-      >
-        <FaDownload class="text-lg" />
-        Descargar Propuestas
-      </a>
+    <!-- Análisis de la Situación -->
+    <div class="bg-gray-50 dark:bg-neutral-800 p-4 rounded-2xl shadow-md mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <FaGlobeAmericas class="text-indigo-600 dark:text-indigo-300 text-2xl" />
+        <h2 class="text-2xl font-semibold dark:text-white">Análisis de la Situación</h2>
+      </div>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        La juventud en Bucaramanga enfrenta desafíos significativos: desempleo elevado, informalidad laboral y brechas en educación superior. El 56,1% de la población trabajadora se encuentra en la informalidad, y las mujeres jóvenes son las más afectadas.
+      </p>
+    </div>
+
+    <!-- Educación y Trabajo Digno -->
+    <div class="flex flex-col gap-6 mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <FaGraduationCap class="text-blue-600 dark:text-blue-300 text-2xl" />
+        <h2 class="text-2xl font-semibold dark:text-white">Educación y Trabajo Digno</h2>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <li class="bg-blue-50 dark:bg-blue-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaHandsHelping class="text-blue-600 dark:text-blue-300 text-xl mt-1" />
+          <span>Reducir la brecha en acceso a educación pública superior.</span>
+        </li>
+        <li class="bg-blue-50 dark:bg-blue-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaGraduationCap class="text-blue-600 dark:text-blue-300 text-xl mt-1" />
+          <span>Impulsar PreICFES populares y de calidad financiados por la alcaldía.</span>
+        </li>
+        <li class="bg-blue-50 dark:bg-blue-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaHandsHelping class="text-blue-600 dark:text-blue-300 text-xl mt-1" />
+          <span>Gestionar más cupos en la UIS y UTS con apoyo de otros Consejos de Juventud.</span>
+        </li>
+        <li class="bg-blue-50 dark:bg-blue-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaHandsHelping class="text-blue-600 dark:text-blue-300 text-xl mt-1" />
+          <span>Formalización del empleo juvenil mediante políticas locales.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Participación, Paz y Justicia -->
+    <div class="bg-green-50 dark:bg-green-900 p-4 rounded-2xl shadow-md mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <FaPeace class="text-green-600 dark:text-green-300 text-2xl" />
+        <h2 class="text-2xl font-semibold dark:text-white">Participación y Paz</h2>
+      </div>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li>Fortalecer espacios juveniles de participación democrática.</li>
+        <li>Impulsar programas de reconciliación, memoria y paz territorial.</li>
+        <li>Eliminar estigmatización y criminalización de la juventud.</li>
+        <li>Reemplazo del servicio militar obligatorio por un servicio social para la paz.</li>
+      </ul>
+    </div>
+
+    <!-- Mujeres y Disidencias -->
+    <div class="bg-pink-50 dark:bg-pink-900 p-4 rounded-2xl shadow-md mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <FaFemale class="text-pink-600 dark:text-pink-300 text-2xl" />
+        <h2 class="text-2xl font-semibold dark:text-white">Mujeres y Disidencias Sexuales</h2>
+      </div>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li>Promover espacios libres de violencia de género.</li>
+        <li>Respaldo a iniciativas de mujeres jóvenes y colectivos LGBTIQ+.</li>
+        <li>Convenios para fortalecer empleo y economía solidaria para mujeres y diversidades.</li>
+      </ul>
+    </div>
+
+    <!-- Cultura y Deporte -->
+    <div class="flex flex-col gap-4 mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <FaMusic class="text-purple-600 dark:text-purple-300 text-2xl" />
+        <FaFutbol class="text-purple-600 dark:text-purple-300 text-2xl" />
+        <h2 class="text-2xl font-semibold dark:text-white">Cultura y Deporte Juvenil</h2>
+      </div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <li class="bg-purple-50 dark:bg-purple-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaMusic class="text-purple-600 dark:text-purple-300 text-xl mt-1" />
+          <span>Fomentar acceso a formación cultural y artística.</span>
+        </li>
+        <li class="bg-purple-50 dark:bg-purple-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaFutbol class="text-purple-600 dark:text-purple-300 text-xl mt-1" />
+          <span>Crear programas deportivos barriales con apoyo de la alcaldía.</span>
+        </li>
+        <li class="bg-purple-50 dark:bg-purple-900 p-6 rounded-2xl shadow-md flex items-start gap-4">
+          <FaMusic class="text-purple-600 dark:text-purple-300 text-xl mt-1" />
+          <span>Apoyo a espacios alternativos como rap, skateboarding y biking.</span>
+        </li>
+      </ul>
     </div>
   </section>
 </Layout>
