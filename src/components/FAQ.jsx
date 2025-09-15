@@ -31,7 +31,7 @@ const FAQItem = ({ question, answer, defaultOpen = false }) => {
   };
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 shadow-sm">
+    <div className="rounded-xl border border-neutral-200 my-4 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 shadow-sm">
       <button
         type="button"
         className="w-full flex items-center justify-between gap-3 p-4 text-left 
