@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar.jsx';
 import ThemeManager from '../components/ThemeManager.jsx';
 import Footer from '../components/Footer.jsx';
 import { ClientRouter } from 'astro:transitions';
+import { Analytics } from '@vercel/analytics/react';
 ---
 
 <!doctype html>
@@ -80,5 +81,6 @@ import { ClientRouter } from 'astro:transitions';
     <div class="no-theme-transition">
       <Footer />
     </div>
+     <Analytics />
   </body>
 </html>
