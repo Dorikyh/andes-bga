@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import Calendar from "../components/Calendar.jsx";
+import { getCollection } from "astro:content";
+
+const items = await getCollection("actividades");
+const eventos = items
+  .filter(i => i.data.published !== false)
+  .map(i => ({
+    id: i.slug,
+    title: i.data.title,
+    start: i.data.start,
+    end: i.data.end ?? undefined,
+    url: `/actividades/${i.slug}`,
+    extendedProps: {
+      location: i.data.location ?? "",
+      image: i.data.image ?? "",
+      excerpt: i.data.excerpt ?? ""
+    }
+  }))
+  .sort((a,b) => new Date(a.start) - new Date(b.start));
+---
+<Layout>
+  <main class="max-w-5xl mx-auto m-16">
+    <h1 class="text-5xl font-bold mb-6">Actividades</h1>
+
+    <!-- Calendar carga el componente React en cliente -->
+    <Calendar client:load events={eventos} />
+	
+<section class="mt-8">
+  <h2 class="text-3xl font-semibold mb-4 dark:text-gray-100">Próximas actividades</h2>
+  <ul class="space-y-3">
+    {eventos
+      .filter(e => new Date(e.start) >= new Date())
+      .slice(0, 8)
+      .map(e => (
+        <li>
+          <a
+            href={e.url}
+            class="block p-3 bg-white dark:bg-neutral-800 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col"
+          >
+            <div class="text-xl mb-2 font-bold text-primary dark:text-primary">
+              {e.title}
+            </div>
+            <div class="text-sm text-gray-600 dark:text-gray-300">
+              {new Date(e.start).toLocaleString()}
+            </div>
+            {e.extendedProps.location && (
+              <div class="text-sm text-gray-600 dark:text-gray-300">
+                📍 {e.extendedProps.location}
+              </div>
+            )}
+            {e.extendedProps.excerpt && (
+              <p class="mt-2 text-sm text-gray-700 dark:text-gray-400">
+                {e.extendedProps.excerpt}
+              </p>
+            )}
+          </a>
+        </li>
+      ))}
+  </ul>
+</section>
+
+  </main>
+</Layout>

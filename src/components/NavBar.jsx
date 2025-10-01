@@ -20,6 +20,7 @@ export default function NavBar() {
   const menuItems = [
     { label: "Inicio", href: "/" },
     { label: "Congreso", href: "/congreso" },
+    { label: "Actividades", href: "/actividades" },
     { label: "Propuestas", href: "/propuestas" },
     { label: "Candidatos", href: "/candidatos" },
   ];

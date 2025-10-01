@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/MainLayout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+
+
+export async function getStaticPaths() {
+  const items = await getCollection("actividades");
+  return items.map((item) => ({ params: { slug: item.slug } }));
+}
+
+export const prerender = true;
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("actividades", slug);
+if (!entry) throw new Error(`Actividad no encontrada: ${slug}`);
+
+const { title, start, end, location, image, excerpt, coords } = entry.data;
+
+const startISO = new Date(start);
+const endISO = end ? new Date(end) : new Date(startISO.getTime() + 60 * 60 * 1000);
+
+// 👉 Formateadores
+const fmtFecha = new Intl.DateTimeFormat("es-ES", {
+  day: "numeric",
+  month: "long"
+}).format(startISO);
+
+const fmtHora = (d) =>
+  new Intl.DateTimeFormat("es-ES", {
+    hour: "numeric",
+    minute: undefined,
+    hour12: true
+  }).format(d);
+
+// strings finales
+const fechaBonita = `${fmtFecha}`;
+const horaInicio = fmtHora(startISO);
+const horaFin = end ? fmtHora(endISO) : null;
+
+// Google Calendar
+const fmtGoogle = (d) => new Date(d).toISOString().replace(/[-:]|\.\d{3}/g, "");
+const gStart = fmtGoogle(startISO);
+const gEnd = fmtGoogle(endISO);
+const googleHref = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+  title
+)}&dates=${gStart}/${gEnd}&details=${encodeURIComponent(
+  excerpt ?? ""
+)}&location=${encodeURIComponent(location ?? "")}&sprop=&sprop=name:ANDES`;
+---
+
+<Layout>
+  <main class="max-w-3xl mx-auto p-6 mt-16 rounded-xl bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 shadow-sm">
+    <header class="mb-4">
+      <h1 class="text-3xl font-bold leading-tight">{title}</h1>
+      <div class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+        📅 {fechaBonita}, {horaInicio}{horaFin ? ` — ${horaFin}` : ``}
+        {location ? <span class="ml-2"> • 📍 {location}</span> : null}
+      </div>
+    </header>
+
+    {image && (
+      <figure class="mb-6">
+        <img
+          src={image}
+          alt={title}
+          class="w-full rounded-md object-cover border border-neutral-200 dark:border-neutral-700"
+        />
+      </figure>
+    )}
+
+    <article class="prose prose-neutral dark:prose-invert bg-transparent p-0">
+      <astro:content render={entry.body} />
+    </article>
+    
+	{coords && (
+  	<section class="mt-6">
+    	<h2 class="text-xl font-semibold mb-2">Ubicación</h2>
+    	<div class="rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700">
+      	<iframe
+        	src={`https://www.openstreetmap.org/export/embed.html?bbox=${coords.lng-0.002},${coords.lat-0.002},${coords.lng+0.002},${coords.lat+0.002}&layer=mapnik&marker=${coords.lat},${coords.lng}`}
+        	class="w-full h-96"
+      	></iframe>
+    	</div>
+    	<p class="text-sm text-neutral-500 mt-2">
+    	</p>
+  	</section>
+	)}
+	
+
+    <div class="mt-6 flex flex-wrap gap-3 items-center">
+      <a
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors
+               hover:bg-primary-500 text-black font-extrabold
+               bg-primary dark:hover:bg-primary-600"
+        href={googleHref}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ➕ Añadir a Google Calendar
+      </a>
+      <a
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors
+               bg-neutral-100 hover:bg-neutral-200 text-neutral-900
+               dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-100"
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          title + " — " + (location ?? "") + " " + fechaBonita + " " + horaInicio
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🔁 Compartir
+      </a>
+    </div>
+
+    <div class="mt-6">
+      <a class="text-sm underline text-neutral-700 dark:text-neutral-300" href="/actividades">
+        ← Volver al calendario
+      </a>
+    </div>
+  </main>
+</Layout>

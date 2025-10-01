@@ -1,0 +1,98 @@
+/* src/styles/calendar.css */
+
+/* Wrapper para control de padding/responsive */
+.fc-wrapper {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+/* Base: estiliza elementos .fc sin depender de FullCalendar main.css */
+.fc {
+  font-family: inherit;
+  --fc-bg: #ffffff;
+  --fc-border: #e6e6e6;
+  --fc-text: #0f172a; /* gray-900 */
+  --fc-muted: #475569; /* gray-600 */
+  --fc-primary: #0ea5a4; /* teal-500 */
+}
+
+/* Toolbar */
+.fc .fc-toolbar {
+  margin-bottom: 0.5rem;
+}
+.fc .fc-toolbar-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+/* Day cells */
+.fc .fc-daygrid-day {
+  border: 1px solid var(--fc-border);
+  background: var(--fc-bg);
+}
+.fc .fc-daygrid-day-number {
+  color: var(--fc-muted);
+  font-weight: 600;
+}
+
+/* Event blocks */
+.fc .fc-event {
+  border: none;
+  padding: 0.35rem 0.45rem;
+  margin: 0.15rem 0.1rem;
+  border-radius: 0.375rem;
+  background: var(--fc-primary);
+  color: white;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom content inside event (from renderEventContent) */
+.fc-event-custom .fc-event-title {
+  font-weight: 600;
+}
+.fc-event-custom .fc-event-sub {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Hover */
+.fc .fc-event:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
+}
+
+/* Dark mode overrides: detecta .dark en <html> */
+:root.dark .fc,
+.fc-wrapper.dark-mode .fc {
+  --fc-bg: #0b1220;    /* dark background */
+  --fc-border: #1f2937; /* gray-800 */
+  --fc-text: #e6eef8;   /* light text */
+  --fc-muted: #9aa6b2;  /* gray-400 */
+  --fc-primary: #06b6d4;/* teal-400 brighter for contrast */
+}
+
+/* Dark mode: day cells and text */
+:root.dark .fc .fc-daygrid-day,
+.fc-wrapper.dark-mode .fc .fc-daygrid-day {
+  background: var(--fc-bg);
+  border-color: var(--fc-border);
+}
+:root.dark .fc .fc-daygrid-day-number,
+.fc-wrapper.dark-mode .fc .fc-daygrid-day-number {
+  color: var(--fc-muted);
+}
+
+/* Dark mode events: different look for accessibility */
+:root.dark .fc .fc-event,
+.fc-wrapper.dark-mode .fc .fc-event {
+  background: var(--fc-primary);
+  color: #041124;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .fc .fc-toolbar-title { font-size: 1rem; }
+  .fc .fc-event { font-size: 0.78rem; padding: 0.25rem; }
+}
