@@ -41,9 +41,9 @@ export default function Countdown() {
       {boxes.map((box, idx) => (
         <div
           key={idx}
-          className={`w-28 md:w-36 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-2xl shadow-lg p-2 md:p-4 transform transition-all duration-500 hover:scale-105 ${box.className}`}
+          className={`w-28 md:w-36 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-2xl shadow-lg p-4 md:p-4 transform transition-all duration-500 hover:scale-105 ${box.className}`}
         >
-          <p className="text-5xl md:text-6xl font-extrabold animate-pulse">
+          <p className="text-6xl md:text-6xl font-extrabold animate-pulse">
             {box.value}
           </p>
           <span className="text-sm md:text-base">{box.label}</span>
