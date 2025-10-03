@@ -108,25 +108,44 @@ const colorTipo = {
   id="imgModal"
   class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 opacity-0 transition-opacity duration-300"
 >
-  <!-- Botón de cerrar grande, circular y translúcido -->
+  <!-- Botón de descargar (misma Y y mismo tamaño que cerrar) -->
   <button
-    id="closeBtn"
-    class="absolute top-6 right-6 w-16 h-16 flex items-center justify-center rounded-full bg-black/40 text-white text-5xl font-bold hover:bg-black/50 transition"
-    aria-label="Cerrar imagen"
+    id="downloadBtn"
+    class="absolute top-6 right-24 w-16 h-16 flex items-center justify-center rounded-full bg-black/40 text-white hover:bg-black/50 transition z-50"
+    aria-label="Descargar imagen"
+    title="Descargar imagen"
   >
-    &times;
+    <!-- icono flecha abajo -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
   </button>
 
-  <!-- Contenedor animado de la imagen (escala + fade) -->
+  <!-- Botón de cerrar (misma Y y mismo tamaño que descargar) -->
+  <button
+    id="closeBtn"
+    class="absolute top-6 right-6 w-16 h-16 flex items-center justify-center rounded-full bg-black/40 text-white hover:bg-black/50 transition z-50"
+    aria-label="Cerrar imagen"
+    title="Cerrar"
+  >
+    <!-- icono X -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Contenedor animado de la imagen (escala + fade). Bajamos su z para que los botones queden encima -->
   <div
     id="imgWrapper"
-    class="w-[90%] h-[90%] transform transition-all duration-300 ease-out opacity-0 scale-95"
+    class="w-[90%] h-[90%] transform transition-all duration-300 ease-out opacity-0 scale-95 z-40"
   >
     <img id="modalImg" class="w-full h-full object-contain rounded-lg shadow-2xl" alt="Plano ampliado" />
   </div>
 </div>
 
-<!-- Script cliente -->
 <script is:inline>
   function openModal(src) {
     const modal = document.getElementById("imgModal");
@@ -134,19 +153,18 @@ const colorTipo = {
     const img = document.getElementById("modalImg");
 
     img.src = src;
+    img.dataset.filename = (src.split("/").pop().split("?")[0]) || "imagen";
+
     modal.classList.remove("hidden");
-    // allow opacity transition
     requestAnimationFrame(() => {
       modal.classList.add("flex", "opacity-100");
       modal.classList.remove("opacity-0");
-      // animate wrapper (scale + fade)
       requestAnimationFrame(() => {
         wrapper.classList.remove("opacity-0", "scale-95");
         wrapper.classList.add("opacity-100", "scale-100");
       });
     });
 
-    // bloquear scroll de fondo
     document.body.style.overflow = "hidden";
   }
 
@@ -154,19 +172,46 @@ const colorTipo = {
     const modal = document.getElementById("imgModal");
     const wrapper = document.getElementById("imgWrapper");
 
-    // animación de salida
     wrapper.classList.remove("opacity-100", "scale-100");
     wrapper.classList.add("opacity-0", "scale-95");
     modal.classList.remove("opacity-100");
     modal.classList.add("opacity-0");
 
-    // esperar la duración de la transición antes de ocultar
     setTimeout(() => {
       modal.classList.remove("flex");
       modal.classList.add("hidden");
-      document.getElementById("modalImg").src = "";
+      const img = document.getElementById("modalImg");
+      img.src = "";
+      delete img.dataset.filename;
       document.body.style.overflow = "";
-    }, 300); // coincide con duration-300
+    }, 300);
+  }
+
+  async function downloadCurrentImage() {
+    const img = document.getElementById("modalImg");
+    const src = img.src;
+    const filename = img.dataset.filename || "imagen";
+
+    try {
+      const res = await fetch(src, { mode: 'cors' });
+      if (!res.ok) throw new Error("fetch failed");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      const a = document.createElement("a");
+      a.href = src;
+      a.target = "_blank";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
   }
 
   // cerrar con click fuera (solo si clickean el overlay)
@@ -174,14 +219,23 @@ const colorTipo = {
     if (e.target.id === "imgModal") closeModal();
   });
 
-  // botón cerrar
-  document.getElementById("closeBtn").addEventListener("click", closeModal);
+  // botón cerrar: click y touchstart
+  const closeBtn = document.getElementById("closeBtn");
+  closeBtn.addEventListener("click", (e) => { e.stopPropagation(); closeModal(); });
+  closeBtn.addEventListener("touchstart", (e) => { e.preventDefault(); e.stopPropagation(); closeModal(); }, { passive: false });
+
+  // botón descargar: click y touchstart
+  const downloadBtn = document.getElementById("downloadBtn");
+  downloadBtn.addEventListener("click", (e) => { e.stopPropagation(); downloadCurrentImage(); });
+  downloadBtn.addEventListener("touchstart", (e) => { e.preventDefault(); e.stopPropagation(); downloadCurrentImage(); }, { passive: false });
 
   // Esc para cerrar
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
 </script>
+
+
 
      
      <div class="mt-8">
