@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/MainLayout.astro";
 import { FaFileAlt, FaUtensils, FaChalkboardTeacher, FaUsers, FaTheaterMasks, FaMusic, FaSun, FaMoon, FaFlag } from "react-icons/fa";
+import Countdown from "../components/Countdown.tsx"; 
 
 const programa = [
   {
@@ -85,7 +86,108 @@ const colorTipo = {
         </p>
       </div>
     </div>
+     
+<!-- Planos antes del timer (mantén tus <img> con onclick="openModal(this.src)") -->
+<div class="grid grid-cols-1 gap-6 mb-8">
+  <img 
+    src="/plano1.webp" 
+    alt="Plano 1" 
+    class="rounded-xl shadow-md cursor-pointer hover:opacity-90 transition"
+    onclick="openModal(this.src)"
+  />
+  <img 
+    src="/plano2.webp" 
+    alt="Plano 2" 
+    class="rounded-xl shadow-md cursor-pointer hover:opacity-90 transition"
+    onclick="openModal(this.src)"
+  />
+</div>
 
+<!-- Modal para imágenes con transiciones -->
+<div
+  id="imgModal"
+  class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 opacity-0 transition-opacity duration-300"
+>
+  <!-- Botón de cerrar grande, circular y translúcido -->
+  <button
+    id="closeBtn"
+    class="absolute top-6 right-6 w-16 h-16 flex items-center justify-center rounded-full bg-black/40 text-white text-5xl font-bold hover:bg-black/50 transition"
+    aria-label="Cerrar imagen"
+  >
+    &times;
+  </button>
+
+  <!-- Contenedor animado de la imagen (escala + fade) -->
+  <div
+    id="imgWrapper"
+    class="w-[90%] h-[90%] transform transition-all duration-300 ease-out opacity-0 scale-95"
+  >
+    <img id="modalImg" class="w-full h-full object-contain rounded-lg shadow-2xl" alt="Plano ampliado" />
+  </div>
+</div>
+
+<!-- Script cliente -->
+<script is:inline>
+  function openModal(src) {
+    const modal = document.getElementById("imgModal");
+    const wrapper = document.getElementById("imgWrapper");
+    const img = document.getElementById("modalImg");
+
+    img.src = src;
+    modal.classList.remove("hidden");
+    // allow opacity transition
+    requestAnimationFrame(() => {
+      modal.classList.add("flex", "opacity-100");
+      modal.classList.remove("opacity-0");
+      // animate wrapper (scale + fade)
+      requestAnimationFrame(() => {
+        wrapper.classList.remove("opacity-0", "scale-95");
+        wrapper.classList.add("opacity-100", "scale-100");
+      });
+    });
+
+    // bloquear scroll de fondo
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("imgModal");
+    const wrapper = document.getElementById("imgWrapper");
+
+    // animación de salida
+    wrapper.classList.remove("opacity-100", "scale-100");
+    wrapper.classList.add("opacity-0", "scale-95");
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0");
+
+    // esperar la duración de la transición antes de ocultar
+    setTimeout(() => {
+      modal.classList.remove("flex");
+      modal.classList.add("hidden");
+      document.getElementById("modalImg").src = "";
+      document.body.style.overflow = "";
+    }, 300); // coincide con duration-300
+  }
+
+  // cerrar con click fuera (solo si clickean el overlay)
+  document.getElementById("imgModal").addEventListener("click", (e) => {
+    if (e.target.id === "imgModal") closeModal();
+  });
+
+  // botón cerrar
+  document.getElementById("closeBtn").addEventListener("click", closeModal);
+
+  // Esc para cerrar
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>
+
+     
+     <div class="mt-8">
+          <Countdown client:load />
+        </div>
+        
     <div class="flex justify-center my-8">
       <a
         href="https://drive.google.com/file/d/1WgCVjl9BK6jOh9gGutP5RTZ4BytBMhUH/view"
@@ -95,7 +197,8 @@ const colorTipo = {
         Ver programa completo
       </a>
     </div>
-    
+     
+
     <div class="space-y-12">
       {programa.map(dia => (
         <div>

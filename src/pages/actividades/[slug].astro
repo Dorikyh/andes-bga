@@ -19,6 +19,10 @@ const { title, start, end, location, image, excerpt, coords } = entry.data;
 const startISO = new Date(start);
 const endISO = end ? new Date(end) : new Date(startISO.getTime() + 60 * 60 * 1000);
 
+// 👉 Ver si el evento ya pasó
+const ahora = new Date();
+const eventoPasado = endISO < ahora;
+
 // 👉 Formateadores
 const fmtFecha = new Intl.DateTimeFormat("es-ES", {
   day: "numeric",
@@ -53,9 +57,10 @@ const googleHref = `https://www.google.com/calendar/render?action=TEMPLATE&text=
     <header class="mb-4">
       <h1 class="text-3xl font-bold leading-tight">{title}</h1>
       <div class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
-        📅 {fechaBonita}, {horaInicio}{horaFin ? ` — ${horaFin}` : ``}
-        {location ? <span class="ml-2"> • 📍 {location}</span> : null}
+        {fechaBonita}, {horaInicio}{horaFin ? ` - ${horaFin}` : ``}
+        <div>{location ? <span>{location}</span> : null}</div>
       </div>
+      
     </header>
 
     {image && (
@@ -74,30 +79,38 @@ const googleHref = `https://www.google.com/calendar/render?action=TEMPLATE&text=
     
 	{coords && (
   	<section class="mt-6">
-    	<h2 class="text-xl font-semibold mb-2">Ubicación</h2>
+    	<h2 class="text-2xl font-semibold mb-2">Ubicación</h2>
     	<div class="rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700">
       	<iframe
         	src={`https://www.openstreetmap.org/export/embed.html?bbox=${coords.lng-0.002},${coords.lat-0.002},${coords.lng+0.002},${coords.lat+0.002}&layer=mapnik&marker=${coords.lat},${coords.lng}`}
         	class="w-full h-96"
       	></iframe>
     	</div>
-    	<p class="text-sm text-neutral-500 mt-2">
-    	</p>
   	</section>
 	)}
 	
 
     <div class="mt-6 flex flex-wrap gap-3 items-center">
-      <a
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors
-               hover:bg-primary-500 text-black font-extrabold
-               bg-primary dark:hover:bg-primary-600"
-        href={googleHref}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ➕ Añadir a Google Calendar
-      </a>
+      {eventoPasado ? (
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium
+                 bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 font-semibold"
+        >
+          ⏳ Este evento ya pasó
+        </span>
+      ) : (
+        <a
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors
+                 hover:bg-primary-500 text-black font-extrabold
+                 bg-primary dark:hover:bg-primary-600"
+          href={googleHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ➕ Añadir a Google Calendar
+        </a>
+      )}
+
       <a
         class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors
                bg-neutral-100 hover:bg-neutral-200 text-neutral-900
