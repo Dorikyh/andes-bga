@@ -95,10 +95,17 @@ export default function AllDevicesMap({
     };
   }, [apiPath, pollInterval, defaultZoom]);
 
-  return (
-    <div
-      id="all-devices-map"
-      style={{ width: "100%", height, borderRadius: "12px", overflow: "hidden" }}
-    ></div>
-  );
+return (
+  <div
+    id="all-devices-map"
+    style={{
+      width: "100%",
+      height,
+      borderRadius: "12px",
+      overflow: "hidden",
+      position: "relative", 
+      zIndex: 0,         
+    }}
+  ></div>
+);
 }
