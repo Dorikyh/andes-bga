@@ -1,0 +1,138 @@
+---
+--- 
+
+<div class="relative w-full max-w-4xl mx-auto mb-8">
+  <div id="slider" class="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden rounded-xl shadow-md cursor-pointer">
+    <img src="/plano1.webp" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-100" />
+    <img src="/plano2.webp" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0" />
+  </div>
+
+  <button id="prevBtn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 z-10">&#10094;</button>
+  <button id="nextBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 z-10">&#10095;</button>
+</div>
+
+<div
+  id="imgModal"
+  class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 opacity-0 transition-opacity duration-300"
+>
+  <button
+    id="downloadBtn"
+    class="absolute top-6 right-24 w-16 h-16 flex items-center justify-center rounded-full bg-black/40 text-white hover:bg-black/50 transition z-50"
+    aria-label="Descargar imagen"
+    title="Descargar imagen"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+  </button>
+
+  <button
+    id="closeBtn"
+    class="absolute top-6 right-6 w-16 h-16 flex items-center justify-center rounded-full bg-black/40 text-white hover:bg-black/50 transition z-50"
+    aria-label="Cerrar imagen"
+    title="Cerrar"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div
+    id="imgWrapper"
+    class="w-[90%] h-[90%] transform transition-all duration-300 ease-out opacity-0 scale-95 z-40"
+  >
+    <img id="modalImg" class="w-full h-full object-contain rounded-lg shadow-2xl" alt="Plano ampliado" />
+  </div>
+</div>
+
+<script is:inline>
+  const slider = document.getElementById('slider');
+  const images = slider.querySelectorAll('img');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => img.style.opacity = i === index ? '1' : '0');
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  });
+
+  slider.addEventListener('click', () => openModal(images[current].src));
+
+  function openModal(src) {
+    const modal = document.getElementById("imgModal");
+    const wrapper = document.getElementById("imgWrapper");
+    const img = document.getElementById("modalImg");
+
+    img.src = src;
+    img.dataset.filename = (src.split("/").pop().split("?")[0]) || "imagen";
+
+    modal.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      modal.classList.add("flex", "opacity-100");
+      modal.classList.remove("opacity-0");
+      requestAnimationFrame(() => wrapper.classList.replace("opacity-0","opacity-100") && wrapper.classList.replace("scale-95","scale-100"));
+    });
+
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("imgModal");
+    const wrapper = document.getElementById("imgWrapper");
+
+    wrapper.classList.replace("opacity-100","opacity-0");
+    wrapper.classList.replace("scale-100","scale-95");
+    modal.classList.replace("opacity-100","opacity-0");
+
+    setTimeout(() => {
+      modal.classList.remove("flex");
+      modal.classList.add("hidden");
+      const img = document.getElementById("modalImg");
+      img.src = "";
+      delete img.dataset.filename;
+      document.body.style.overflow = "";
+    }, 300);
+  }
+
+  async function downloadCurrentImage() {
+    const img = document.getElementById("modalImg");
+    const src = img.src;
+    const filename = img.dataset.filename || "imagen";
+
+    try {
+      const res = await fetch(src, { mode: 'cors' });
+      if (!res.ok) throw new Error("fetch failed");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch {
+      const a = document.createElement("a");
+      a.href = src;
+      a.target = "_blank";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+  }
+
+  document.getElementById("imgModal").addEventListener("click", (e) => e.target.id === "imgModal" && closeModal());
+  document.getElementById("closeBtn").addEventListener("click", e => { e.stopPropagation(); closeModal(); });
+  document.getElementById("downloadBtn").addEventListener("click", e => { e.stopPropagation(); downloadCurrentImage(); });
+  document.addEventListener("keydown", (e) => e.key === "Escape" && closeModal());
+</script>
