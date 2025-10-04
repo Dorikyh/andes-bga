@@ -81,7 +81,7 @@ export default function ProgramSchedule() {
         </>
       ),
       resources: [
-        { title: "ANDES — página institucional (info organizativa)", href: "https://andes.org.co/", desc: "Información general sobre la organización y sus líneas de trabajo." }
+        { title: "ANDES — página institucional", href: "https://andescolombia.org/", desc: "Información general sobre la organización y sus líneas de trabajo." }
       ]
     },
     "Panel: EDUCACIÓN DEL TAMAÑO DE NUESTRAS LUCHAS": {
@@ -99,7 +99,9 @@ export default function ProgramSchedule() {
         </>
       ),
       resources: [
-        { title: "Sistema General de Participaciones", href: "https://www.mineducacion.gov.co/1759/articles-360397_dia1a_00.pdf", desc: "Documento explicativo sobre el Sistema General de Participaciones." } // referencia: mineducacion PDF
+        { title: "Sistema General de Participaciones", href: "https://www.mineducacion.gov.co/1759/articles-360397_dia1a_00.pdf", desc: "Documento explicativo sobre el Sistema General de Participaciones." },
+        { title: "Ley 1885 de 2018 (CMJ)", href: "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=85540", desc: "Documento explicativo sobre el Sistema General de Participaciones." },
+        { title: "FECODE (Wikipedia)", href: "https://es.wikipedia.org/wiki/Federaci%C3%B3n_Colombiana_de_Trabajadores_de_la_Educaci%C3%B3n", desc: "Conoce la historia de la Federación Colombiana De Trabajadores de la Educación." }
       ]
     },
     "Movimiento estudiantil secundarista en América Latina y exposición artística-cultural": {
@@ -156,7 +158,10 @@ export default function ProgramSchedule() {
         </>
       ),
       resources: [
-        { title: "SEIP / Etnoeducación — referencias", href: "https://www.mineducacion.gov.co", desc: "Consulta documentos y programas en el MinEducación relacionados a educación diferencial y territorial." }
+        { title: "SEIP / Etnoeducación — referencias", href: "https://www.mineducacion.gov.co", desc: "Consulta documentos y programas en el MinEducación relacionados a educación diferencial y territorial." },
+        { title: "Consejo Regional Indígena del Cauca (CRIC)", href: "https://es.wikipedia.org/wiki/Consejo_Regional_Ind%C3%ADgena_del_Cauca", desc: "Conoce a profundidad el CRIC y su historia." },
+        { title: "Proceso de Comunidades Negras (PCN)", href: "https://renacientes.net/", desc: "Conoce a profundidad el PCN y su historia." },
+        { title: "La calidad educativa, un análisis desde la violencia en Colombia", href: "https://www.revistaespacios.com/a20v41n18/20411827.html", desc: "Análisis sobre la estandarización y su relación con la desigualdad socioeconómica y ruralidad." },
       ]
     },
     "Presentación: Tráiler documental 'Una historia que renace'": {
@@ -187,7 +192,8 @@ export default function ProgramSchedule() {
       ),
       resources: [
         { title: "UNICEF Colombia — informe sobre reclutamiento y uso de niños", href: "https://www.unicef.org/colombia/comunicados-prensa/informe-de-reclutamiento-y-utilizacion-de-ninos-en-conflicto", desc: "Informe y contexto sobre reclutamiento infantil en Colombia." },
-        { title: "Cobertura informativa reciente (contexto)", href: "https://elpais.com/america-colombia/2025-05-18/de-panfletos-amenazantes-a-mentiras-en-tiktok-el-reclutamiento-infantil-se-agrava-en-colombia.html", desc: "Reportaje sobre cómo ha evolucionado el reclutamiento (uso de redes sociales)." }
+        { title: "Cobertura informativa reciente (contexto)", href: "https://elpais.com/america-colombia/2025-05-18/de-panfletos-amenazantes-a-mentiras-en-tiktok-el-reclutamiento-infantil-se-agrava-en-colombia.html", desc: "Reportaje sobre cómo ha evolucionado el reclutamiento (uso de redes sociales)." },
+        { title: "Objeción de conciencia (Temblores ONG)", href: "https://www.temblores.org/objecion-conciencia-servicio-militar", desc: "Sobre el Servicio Militar Obligatorio, cifras y la objeción de conciencia." }
       ]
     },
     "Discusiones temáticas: Ley 115, educación superior, PAE, FFIE": {
@@ -206,7 +212,8 @@ export default function ProgramSchedule() {
       resources: [
         { title: "Ley 115 de 1994", href: "https://www.mineducacion.gov.co/1621/articles-85906_archivo_pdf.pdf", desc: "Documento oficial de la Ley 115" },
         { title: "ICFES (sitio web)", href: "https://www.icfes.gov.co/", desc: "Información de citaciones, resultados y guías." },
-        { title: "PAE (Programa de Alimentación Escolar)", href: "https://www.mineducacion.gov.co/portal/micrositios-preescolar-basica-y-media/Programa-de-Alimentacion-Escolar-PAE/", desc: "Normativa y detalles del programa." }
+        { title: "Programa de Alimentación Escolar (PAE)", href: "https://www.mineducacion.gov.co/portal/micrositios-preescolar-basica-y-media/Programa-de-Alimentacion-Escolar-PAE/", desc: "Normativa y detalles del programa." },
+        { title: "Fondo de Financiamiento de la Infraestructura Educativa (FFIE)", href: "https://educacionrindecuentas.mineducacion.gov.co/pilar-1-educacion-de-calidad/gestion-del-fondo-de-financiamiento-de-infraestructura/", desc: "Cómo se financia la Educación." },
       ]
     },
     "Mujer, género, diversidad sexual, antimilitarismo, arte y comunicaciones": {
@@ -218,8 +225,8 @@ export default function ProgramSchedule() {
         </>
       ),
       resources: [
-        { title: "PAE — información oficial", href: "https://www.mineducacion.gov.co/portal/micrositios-preescolar-basica-y-media/Programa-de-Alimentacion-Escolar-PAE/", desc: "Guía y normativa del Programa de Alimentación Escolar." },
-        { title: "UNESCO — alfabetización mediática y recursos", href: "https://www.unesco.org/en/media-information-literacy", desc: "Herramientas para formación en medios y combate a la desinformación." }
+        { title: "PAE (Programa de Alimentación Escolar)", href: "https://www.mineducacion.gov.co/portal/micrositios-preescolar-basica-y-media/Programa-de-Alimentacion-Escolar-PAE/", desc: "Guía y normativa del Programa de Alimentación Escolar." },
+        { title: "UNESCO - alfabetización mediática y recursos", href: "https://www.unesco.org/en/media-information-literacy", desc: "Herramientas para formación en medios y combate a la desinformación." }
       ]
     },
     "Talleres simultáneos: Stencil, Fotografía, Teatro, Escritura, Batuca y música": {
