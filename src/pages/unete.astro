@@ -1,0 +1,180 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { FaInstagram, FaUsers, FaWhatsapp, FaBullhorn, FaHeart, FaHandsHelping, FaBook } from "react-icons/fa";
+import FAQItem from "../components/FAQ.jsx";
+---
+
+<MainLayout client:load>
+  <!-- HERO -->
+  <section class="mt-16 relative flex flex-col justify-center items-center text-center min-h-[90vh] px-6 overflow-hidden">
+    <div class="relative z-10 max-w-3xl">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+        ¡Únete a la<span class="text-gradient bg-gradient-to-r from-primary via-yellow-400 to-secondary bg-clip-text text-transparent"> ANDES Santander</span>!
+      </h1>
+      <p class="text-xl text-neutral-200 mb-8">
+        Somos estudiantes organizados que luchamos por una educación pública, crítica y transformadora.  
+        Tu voz también cuenta.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://chat.whatsapp.com/HMRPmy1mlD88tbhSI1oZBD" class="btn-primary flex items-center gap-2">
+          <FaWhatsapp className="inline" /> Únete al grupo
+        </a>
+        <a href="https://instagram.com/andesantander" class="btn-secondary flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-neutral-900">
+          <FaInstagram className="inline" /> Síguenos en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOTIVOS PARA UNIRSE -->
+  <section class="py-24 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-neutral-900 dark:text-white">¿Por qué ser parte de la ANDES?</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Card 1 -->
+        <div class="p-6 rounded-2xl bg-neutral-100 dark:bg-neutral-800 shadow-md hover:scale-105 transition transform text-center flex flex-col items-center h-full">
+          <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-indigo-600 to-violet-500 flex items-center justify-center mb-4">
+            <FaHeart className="text-primary text-5xl md:text-6xl" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Compromiso social</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Formamos líderes que defienden la educación y la justicia social desde las aulas.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 rounded-2xl bg-neutral-100 dark:bg-neutral-800 shadow-md hover:scale-105 transition transform text-center flex flex-col items-center h-full">
+          <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-indigo-600 to-violet-500 flex items-center justify-center mb-4">
+            <FaBullhorn className="text-primary text-5xl md:text-6xl" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Tu voz cuenta</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Participa en decisiones, actividades y debates que impactan tu colegio y comunidad.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 rounded-2xl bg-neutral-100 dark:bg-neutral-800 shadow-md hover:scale-105 transition transform text-center flex flex-col items-center h-full">
+          <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mb-4">
+            <FaHandsHelping className="text-primary text-5xl md:text-6xl" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Red de apoyo</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Conoce jóvenes de toda Santander comprometidos con un cambio real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CÓMO PARTICIPAR (horizontal en PC) -->
+<section class="py-24 bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-slate-800 dark:to-slate-900 text-center">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-neutral-900 dark:text-white">¿Cómo puedes participar?</h2>
+
+    <!-- FLEX responsivo: columna en móvil, fila en md+ -->
+    <div class="flex flex-col md:flex-row gap-8 items-stretch">
+      <!-- Paso 1 -->
+      <div class="relative p-6 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg flex flex-col items-center text-center flex-1 min-h-[320px]">
+        <div class="absolute -top-6 flex items-center justify-center w-12 h-12 text-xl rounded-full text-white font-bold">1</div>
+        <div class="mt-6 w-20 h-20 md:w-24 md:h-24 rounded-full  flex items-center justify-center mb-4">
+          <FaUsers size={36} className="text-primary" />
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Únete al grupo</h3>
+        <p class="text-neutral-600 dark:text-neutral-300">En el grupo de WhatsApp compartimos convocatorias y organizamos actividades locales.</p>
+        <a href="https://chat.whatsapp.com/HMRPmy1mlD88tbhSI1oZBD" class="mt-4 inline-block text-sm font-medium underline">Entrar al grupo</a>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="relative p-6 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg flex flex-col items-center text-center flex-1 min-h-[320px]">
+        <div class="absolute -top-6 flex text-xl items-center justify-center w-12 h-12 rounded-full  text-white font-bold">2</div>
+        <div class="mt-6 w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-4">
+          <FaBook size={36} className="text-primary" />
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Infórmate y participa</h3>
+        <p class="text-neutral-600 dark:text-neutral-300">Sigue nuestras redes y asiste a talleres, asambleas y formaciones.</p>
+        <a href="https://instagram.com/andesantander" class="mt-4 inline-block text-sm font-medium underline">Síguenos en IG</a>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="relative p-6 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg flex flex-col items-center text-center flex-1 min-h-[320px]">
+        <div class="absolute -top-6 text-xl flex items-center justify-center w-12 h-12 rounded-full bg-yellow-400 text-white font-bold">3</div>
+        <div class="mt-6 w-20 h-20 md:w-24 md:h-24 rounded-full bg-yellow-400/10 dark:bg-yellow-400/20 flex items-center justify-center mb-4">
+          <FaHeart size={36} className="text-primary" />
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Propón y lidera</h3>
+        <p class="text-neutral-600 dark:text-neutral-300">Organiza tu comité estudiantil o impulsa iniciativas dentro de tu institución.</p>
+        <a href="#contact-form" class="mt-4 inline-block text-sm font-medium underline">Deja tu contacto</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FORMULARIO SOLO WHATSAPP -->
+<section id="contact-form" class="py-16">
+  <div class="max-w-3xl mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-4 text-neutral-900 dark:text-white">
+      Déjanos tu contacto
+    </h3>
+
+    <form id="whatsapp-form" class="grid gap-4 sm:grid-cols-2 bg-white dark:bg-neutral-800 p-6 rounded-2xl shadow-md" onsubmit="return false;">
+      <input id="nombre" name="nombre" placeholder="Nombre" class="p-3 rounded-md bg-neutral-100 dark:bg-neutral-700" />
+      <input id="colegio" name="colegio" placeholder="Colegio" class="p-3 rounded-md bg-neutral-100 dark:bg-neutral-700" />
+      <input id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" class="p-3 rounded-md bg-neutral-100 dark:bg-neutral-700 sm:col-span-2" />
+      <textarea id="mensaje" name="mensaje" placeholder="¿En qué quieres participar?" class="p-3 rounded-md bg-neutral-100 dark:bg-neutral-700 sm:col-span-2"></textarea>
+
+      <button id="send-whatsapp" type="button" class="btn-primary sm:col-span-2 flex justify-center items-center gap-2">
+        <span>Enviar por WhatsApp</span>
+      </button>
+    </form>
+
+    <p class="text-sm text-neutral-500 mt-3">
+      ANDES Santander no almacena ningún dato en la web.
+    </p>
+  </div>
+
+  <script>
+    const PHONE_NUMBER = "573006075816"; // Número receptor en formato internacional
+
+    function getFormData() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const colegio = document.getElementById("colegio").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+      return { nombre, colegio, telefono, mensaje };
+    }
+
+    function buildText(form) {
+      return [
+        "ÚNETE ANDES SANTANDER",
+        form.nombre ? `Nombre: ${form.nombre}` : null,
+        form.colegio ? `Colegio: ${form.colegio}` : null,
+        form.telefono ? `Teléfono: ${form.telefono}` : null,
+        form.mensaje ? `Mensaje: ${form.mensaje}` : null,
+      ].filter(Boolean).join("\n");
+    }
+
+    document.getElementById("send-whatsapp").addEventListener("click", () => {
+      const data = getFormData();
+      const text = buildText(data);
+      if (!text) {
+        alert("Por favor completa al menos un campo antes de enviar.");
+        return;
+      }
+      const encoded = encodeURIComponent(text);
+      const url = `https://wa.me/${PHONE_NUMBER}?text=${encoded}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</section>
+
+
+
+  <!-- FAQ -->
+  <section id="faq" class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-neutral-900 dark:text-white mb-4">Preguntas frecuentes</h2>
+      </div>
+      <div class="space-y-6">
+        <FAQItem client:load question="¿Tengo que ser delegado o vocero para unirme?" answer="No. Cualquier estudiante de secundaria puede participar, sin importar su rol en el colegio." />
+        <FAQItem client:load question="¿Tiene costo unirse?" answer="No. ANDES es un movimiento libre y sin fines de lucro." />
+        <FAQItem client:load question="¿Qué beneficios obtengo?" answer="Formación política, espacios de liderazgo, y la oportunidad de incidir en tu institución educativa." />
+      </div>
+    </div>
+  </section>
+</MainLayout>

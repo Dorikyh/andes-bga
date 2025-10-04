@@ -128,11 +128,33 @@ export default function ProgramSchedule() {
       subtitle: "Exposición magistral y talleres (3 hrs)",
       body: (
         <>
-          <p className="mb-2">Incluye:</p>
           <ul className="list-disc ml-5 mb-2">
             <li>Exposición sobre el Sistema General de Participaciones y financiación de la educación (Ilich).</li>
+                        <ul className="list-disc ml-5 mb-2">
+            <li>¿Cómo financiamos la educación en Colombia?</li>
+<ul className="list-disc ml-5 mb-2">
+<li>En primer lugar, el profesor y director para el desarrollo de la educación en las
+regiones, dirigirá una exposición sobre el “sistema general de participaciones” lo
+que es y el momento por el que atraviesa la discusión financiera de la educación
+básica y media.</li>
+<li>En segundo lugar, se realizarán grupos de trabajo entre 12 a 30 estudiantes para
+desarrollar una actividad sobre la ubicación de los problemas fundamentales y
+necesidades cercanas de las y los estudiantes.</li>
+</ul>
+            </ul>
             <li>Grupos de trabajo (12–30 estudiantes) para ubicar problemas fundamentales y necesidades estudiantiles.</li>
-            <li>Mesa Plan Decenal 2026-2036: aporte estudiantil a ejes temáticos; explicará el MinEducación qué es un plan decenal y abrirá diálogo.</li>
+            <li>Plan decenal de educación</li>
+            <ul className="list-disc ml-5 mb-2">
+            <li>¿Qué vamos a hacer con la educación en 10 años?
+Esta mesa de trabajo tiene como objetivo desarrollar un espacio de construcción y aporte
+de las y los estudiantes al plan decenal de educación 2026-2036 en perspectiva de
+plasmar las consignas y banderas que hemos desarrollado como organización y
+movimiento estudiantil.
+El ministerio de educación explicara en que consiste un plan decenal, cuales son sus
+objetivos y como se ha determinado su construcción desde el gobierno, posterior a ello, se
+abrirá un espacio de diálogo y construcción por ejes temáticos que puedan concluir en
+documentos para aportar a esta construcción del plan decenal.</li>
+            </ul>
             <li>Conversatorio sobre articulación con movimientos sociales y construcción de comunidad estudiantil.</li>
             <li>Taller: Democracia para la transformación — análisis por escenarios (CMJ, consejo estudiantil, personería) y exposición creativa (10 min por grupo).</li>
           </ul>
@@ -148,7 +170,11 @@ export default function ProgramSchedule() {
       subtitle: "PCN, Jóvenes CRIC, MJ Álvaro Uque, Fensuagro",
       body: (
         <>
-          <p className="mb-2">Reflexión sobre modelos educativos diversos, educación propia de territorios, propuestas de SEIP y etnoeducación. Preguntas orientadoras incluyen:</p>
+          <p className="mb-2">En Colombia coexisten diferentes visiones de la educación y como garantizarla de acuerdo con los
+territorios, culturas y diferentes factores diferenciales propios de un país multicultural. Por ello, desde
+la ANDES , queremos enriquecer nuestra visión sobre los modelos educativos y además compartir
+nuestras experiencias de trabajo en el marco de la lucha por un nuevo modelo de educación que no
+estandarice, sino que pluralice. Preguntas orientadoras incluyen:</p>
           <ul className="list-disc ml-5 mb-2">
             <li>¿Cómo se entiende educación desde cultura y territorio?</li>
             <li>¿Qué elementos centrales debe tener una propuesta autónoma y crítica?</li>
@@ -169,7 +195,16 @@ export default function ProgramSchedule() {
       subtitle: "'Una historia que renace' — memoria estudiantil",
       body: (
         <>
-          <p className="mb-2">Proyección del tráiler y otros cortos producidos por la ANDES para la construcción de memoria del movimiento secundarista en Colombia.</p>
+          <p className="mb-2">Un viaje por los momentos mas importantes del movimiento secundarista en Colombia,
+sus luchas, sus conquistas y nuestro papel como ANDES en ellas.
+En un primer momento, por medio de un recorrido guiado las personas asistentes al
+espacio podrán reconocer los hitos y logros de las movilizaciones estudiantiles, incluida la
+historia de la ANDES.
+En segundo lugar, se presentará el tráiler del documental “una historia que renace” cuya
+construcción está a cargo de la ANDES bajo la idea de aportar a la construcción de
+
+memoria estudiantil en Colombia y la recuperación de nuestra historia. Además de otros
+cortometrajes.</p>
         </>
       ),
       resources: [
@@ -181,13 +216,21 @@ export default function ProgramSchedule() {
       subtitle: "Reflexión sobre militarización y víctimas jóvenes",
       body: (
         <>
-          <p className="mb-2">Preguntas orientadoras:</p>
+          <p className="mb-2">En las guerras, uno de los sectores más afectados son las y los jóvenes, como victimas o incluso en
+algunos escenarios lamentables como victimarios, y es por esto que como organización hemos estado
+siempre del lado de la paz, alzando la voz por aquellos y aquellas que no pueden, denunciando el
+cierre de escuelas por la guerra interna, el reclutamiento forzado de menores, entre otras
+consecuencias de la cultura de violencia en la que vivimos.
+Por lo anterior, y teniendo en cuenta la grave situación que atraviesa nuestro país y desde luego las
+escuelas como una manifestación de la sociedad, se hace necesario que las y los estudiantes de
+secundaria creemos alternativas que pretendan acabar esta cultura de la violencia desde las escuelas
+con proyección a futuro. Preguntas orientadoras:</p>
           <ul className="list-disc ml-5 mb-2">
-            <li>¿En qué consiste la militarización de la vida juvenil?</li>
-            <li>¿Qué alternativas estructurales para la violencia?</li>
-            <li>¿Qué papel pueden jugar escuelas y comunidad educativa?</li>
+            <li>¿En que consiste el problema de la militarización de la vida juvenil?</li>
+            <li>¿Cuáles son las alternativas para este problema estructural de la violencia?</li>
+            <li>¿Qué papel pueden jugar las escuelas y/o la comunidad educativa?</li>
           </ul>
-          <p className="text-sm italic">Ronda pública 5 palabras.</p>
+          <p className="text-sm italic">Las y los asistentes tendrán una ronda de 5 palabras para generar preguntas o comentarios al tema central.</p>
         </>
       ),
       resources: [
@@ -198,10 +241,17 @@ export default function ProgramSchedule() {
     },
     "Discusiones temáticas: Ley 115, educación superior, PAE, FFIE": {
       title: "Discusiones temáticas",
-      subtitle: "Reforma a la Ley 115; nuevo modelo educativo; acceso a educación superior",
+      subtitle: "ANDES, ACEU, Min educación",
       body: (
         <>
-          <p className="mb-2">Conversatorios sobre:</p>
+          <p className="mb-2">Acceso a la educación superior ¿ICFES?:</p>
+          <ul className="list-disc ml-5 mb-2">
+            <li>En la lucha por asegurar la educación como un derecho fundamental y lograr su garantía
+en todos los niveles por parte del Estado colombiano, se hace necesario plantear una
+postura sobre las “pruebas saber” pues a hoy son un obstáculo central para el tránsito de
+la educación media a la educación superior.</li>
+          </ul>
+          <p className="mb-2">Discusiones temáticas:</p>
           <ul className="list-disc ml-5 mb-2">
             <li>Obstáculos de las pruebas estandarizadas (Saber/ICFES) para el acceso a la universidad.</li>
             <li>Estrategias del Ministerio para la universalización del acceso a educación superior.</li>
@@ -221,11 +271,22 @@ export default function ProgramSchedule() {
       subtitle: "PAE; perspectivas y propuestas",
       body: (
         <>
-          <p className="mb-2">Conversatorio y paneles que incluyen propuestas para hacer las escuelas espacios seguros, inclusivos y libres de violencia; reflexión sobre PAE y políticas con perspectiva de género.</p>
+          <p className="mb-2">Arte y cultura en las escuelas.</p>
+          <p className="mb-2">Por años, las expresiones artísticas y culturales han sido marginadas de los colegios
+públicos, y con contadas excepciones de algunos colegios cuyo énfasis es “artístico” y
+académico, la posibilidad que tienen los jóvenes y estudiantes cuyas habilidades y
+aptitudes no corresponden a la dinámica de competencias es casi nula. La escuela
+“oficial” en Colombia no permite a alas y los jóvenes construir un proyecto de vida que
+tenga como principio la autonomía académica y profesional.</p>
+                <ul className="list-disc ml-5 mb-2">
+          <li>Se presentarán algunos actos culturales y sus organizaciones conversaran sobre
+como han interiorizado en su idea de educación el papel del arte y la cultura.</li>
+        </ul>
+        
         </>
       ),
       resources: [
-        { title: "PAE (Programa de Alimentación Escolar)", href: "https://www.mineducacion.gov.co/portal/micrositios-preescolar-basica-y-media/Programa-de-Alimentacion-Escolar-PAE/", desc: "Guía y normativa del Programa de Alimentación Escolar." },
+        { title: "Programa de Alimentación Escolar (PAE)", href: "https://www.mineducacion.gov.co/portal/micrositios-preescolar-basica-y-media/Programa-de-Alimentacion-Escolar-PAE/", desc: "Guía y normativa del Programa de Alimentación Escolar." },
         { title: "UNESCO - alfabetización mediática y recursos", href: "https://www.unesco.org/en/media-information-literacy", desc: "Herramientas para formación en medios y combate a la desinformación." }
       ]
     },
@@ -256,7 +317,15 @@ export default function ProgramSchedule() {
       subtitle: "Lectura de conclusiones y síntesis colectiva (4 hrs)",
       body: (
         <>
-          <p className="mb-2">Cada mesa lee sus conclusiones; se abre ronda de intervenciones de 5 palabras para adendas y correcciones. Se construye el documento final que sintetiza propuestas y se deja como insumo para el periodo venidero.</p>
+          <p className="mb-2">Posterior a todas las mesas de discusión, talleres y debates simultáneos, reunidos y
+reunidas en plenaria, compartiremos las conclusiones de cada uno de los espacios, para
+que puedan realizarse algunos aportes finales y poder construir un documento que
+sintetice nuestra propuesta y sirva como insumo para el periodo venidero.</p>
+        <ul className="list-disc ml-5 mb-2">
+          <li>Cada mesa tendrá la posibilidad de leer las conclusiones y se dará una ronde de
+intervenciones de 5 palabras, para generar aportes, adendas o correcciones que
+se precisen.</li>
+        </ul>
         </>
       ),
       resources: []
