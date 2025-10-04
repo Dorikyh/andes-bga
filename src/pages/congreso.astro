@@ -1,129 +1,58 @@
 ---
+// src/pages/programa.astro
 import Layout from "../layouts/MainLayout.astro";
 import Countdown from "../components/Countdown.tsx";
 import AllDevicesMap from '../components/AllDevicesMap.jsx';
 import ImageSlider from '../components/ImageSlider.astro';
-import { FaFileAlt, FaUtensils, FaChalkboardTeacher, FaUsers, FaTheaterMasks, FaMusic, FaSun, FaMoon, FaFlag } from "react-icons/fa";
-
-const programa = [
-  {
-    dia: "Martes, 7 de octubre",
-    actividades: [
-      { hora: "1:00 pm", texto: "Llegada de delegaciones", tipo: "general", icono: FaUsers },
-      { hora: "3:30 pm", texto: "Apertura y acreditación de asistentes", tipo: "panel", icono: FaChalkboardTeacher },
-      { hora: "4:30 pm", texto: "Festival secundarista por la cultura, la democracia escolar y la paz", tipo: "cultural", icono: FaTheaterMasks },
-      { hora: "7:00 pm", texto: "Cena", tipo: "comida", icono: FaUtensils },
-      { hora: "7:30 pm", texto: "Juntanzas deportivas Interregionales", tipo: "deporte", icono: FaUsers },
-      { hora: "9:30 pm", texto: "Descanso", tipo: "descanso", icono: FaMoon }
-    ]
-  },
-  {
-    dia: "Miércoles, 8 de octubre",
-    actividades: [
-      { hora: "7:30 am", texto: "Desayuno", tipo: "comida", icono: FaUtensils },
-      { hora: "8:00 am", texto: "Acto de Instalación, palabras de apertura, presentaciones videos regionales y artísticas", tipo: "panel", icono: FaChalkboardTeacher },
-      { hora: "9:00 am", texto: "Panel: EDUCACIÓN DEL TAMAÑO DE NUESTRAS LUCHAS", tipo: "panel", icono: FaChalkboardTeacher },
-      { hora: "11:00 am", texto: "Movimiento estudiantil secundarista en América Latina y exposición artística-cultural", tipo: "cultural", icono: FaTheaterMasks },
-      { hora: "12:30 pm", texto: "Almuerzo", tipo: "comida", icono: FaUtensils },
-      { hora: "1:30 pm", texto: "Grupos de trabajo simultáneo (Financiación, Plan Decenal, Articulación con organizaciones, Consejos estudiantiles, Educación rural)", tipo: "trabajo", icono: FaUsers },
-      { hora: "5:00 pm", texto: "Panel central: Resistimos a la estandarización del sistema educativo", tipo: "panel", icono: FaChalkboardTeacher },
-      { hora: "6:30 pm", texto: "Presentación: Tráiler documental 'Una historia que renace'", tipo: "cultural", icono: FaTheaterMasks },
-      { hora: "8:00 pm", texto: "Cena", tipo: "comida", icono: FaUtensils }
-    ]
-  },
-  {
-    dia: "Jueves, 9 de octubre",
-    actividades: [
-      { hora: "7:00 am", texto: "Desayuno", tipo: "comida", icono: FaUtensils },
-      { hora: "8:30 am", texto: "Panel central: Una generación que sigue exigiendo paz", tipo: "panel", icono: FaChalkboardTeacher },
-      { hora: "10:30 am", texto: "Discusiones temáticas: Ley 115, educación superior, PAE, FFIE", tipo: "trabajo", icono: FaUsers },
-      { hora: "12:30 pm", texto: "Almuerzo", tipo: "comida", icono: FaUtensils },
-      { hora: "1:00 pm", texto: "Mujer, género, diversidad sexual, antimilitarismo, arte y comunicaciones", tipo: "cultural", icono: FaTheaterMasks },
-      { hora: "3:30 - 4:30 pm", texto: "Talleres simultáneos: Stencil, Fotografía, Teatro, Escritura, Batuca y música", tipo: "cultural", icono: FaMusic },
-      { hora: "7:00 pm", texto: "Cena", tipo: "comida", icono: FaUtensils },
-      { hora: "8:00 pm", texto: "Noche Cultural: Voces en rebeldía", tipo: "cultural", icono: FaTheaterMasks },
-      { hora: "9:30 pm", texto: "Descanso", tipo: "descanso", icono: FaMoon }
-    ]
-  },
-  {
-    dia: "Viernes, 10 de octubre",
-    actividades: [
-      { hora: "7:00 am", texto: "Desayuno", tipo: "comida", icono: FaUtensils },
-      { hora: "8:00 am", texto: "Plenaria: discusiones temáticas", tipo: "panel", icono: FaChalkboardTeacher },
-      { hora: "12:00 pm", texto: "Almuerzo", tipo: "comida", icono: FaUtensils },
-      { hora: "2:00 pm", texto: "Lectura de agenda de movilización", tipo: "panel", icono: FaFlag },
-      { hora: "2:30 pm", texto: "Declaración política", tipo: "panel", icono: FaFlag },
-      { hora: "3:30 pm", texto: "Acto de Cierre", tipo: "panel", icono: FaFlag },
-      { hora: "4:00 pm", texto: "Salida de delegaciones", tipo: "general", icono: FaSun }
-    ]
-  }
-];
-
-const colorTipo = {
-  comida: "bg-yellow-100 dark:bg-yellow-800 border-yellow-300 dark:border-yellow-600 text-yellow-800 dark:text-yellow-100",
-  panel: "bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-800 dark:text-blue-100",
-  cultural: "bg-purple-100 dark:bg-purple-900 border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-100",
-  trabajo: "bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700 text-green-800 dark:text-green-100",
-  descanso: "bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-100",
-  deporte: "bg-red-100 dark:bg-red-900 border-red-300 dark:border-red-700 text-red-800 dark:text-red-100",
-  general: "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-100"
-};
+import ProgramSchedule from '../components/ProgramSchedule.jsx';
+import { FaFileAlt } from "react-icons/fa";
 ---
-
-<Layout>
-  <section class="max-w-6xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="relative bg-cover bg-center rounded-2xl shadow-lg mb-8" style="background-image: url('/cones.webp');">
-      <div class="bg-black/50 rounded-2xl px-6 py-16 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">Programa CONES 2025</h1>
-        <p class="text-gray-100 mt-4 max-w-3xl mx-auto">
-          Noveno Congreso Nacional de Estudiantes de Secundaria: actividades, paneles y talleres 
-          para fortalecer la educación, cultura y participación juvenil.
-        </p>
-      </div>
-    </div>
-
-    <!-- Slider -->
-    <ImageSlider />
-
-    <AllDevicesMap client:only="react" apiPath="/api/locations" pollInterval={5000} />
-
-    <h2 class="md:text-5xl text-4xl font-bold mt-8 text-center">Falta poco para el CONES</h2>
-    <div class="mt-8">
-      <Countdown client:load />
-    </div>
-
-    <div class="flex justify-center my-8">
-      <a
-        href="https://drive.google.com/file/d/1WgCVjl9BK6jOh9gGutP5RTZ4BytBMhUH/view"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-2xl shadow-md hover:bg-blue-700 transition"
-      >
-        <FaFileAlt class="text-lg" />
-        Ver programa completo
-      </a>
-    </div>
-
-    <!-- Programa completo -->
-    <div class="space-y-12">
-      {programa.map(dia => (
-        <div>
-          <h2 class="text-3xl font-semibold mb-4 dark:text-white">{dia.dia}</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {dia.actividades.map(act => {
-              const Icon = act.icono;
-              return (
-                <div class={`p-4 rounded-xl border ${colorTipo[act.tipo]} flex items-start gap-4`}>
-                  <div class="text-2xl mt-1"><Icon /></div>
-                  <div>
-                    <p class="font-semibold">{act.hora}</p>
-                    <p>{act.texto}</p>
-                  </div>
-                </div>
-              );
-            })}
+<!doctype html>
+<html lang="es" class="antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programa CONES 2025</title>
+  </head>
+  <body class="text-gray-900 dark:text-gray-100">
+    <Layout>
+      <section class="max-w-6xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="relative bg-cover bg-center rounded-2xl shadow-lg mb-8" style="background-image: url('/cones.webp');">
+          <div class="bg-black/50 rounded-2xl px-6 py-16 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">Programa CONES 2025</h1>
+            <p class="text-gray-100 mt-4 max-w-3xl mx-auto">
+              Noveno Congreso Nacional de Estudiantes de Secundaria: actividades, paneles y talleres 
+              para fortalecer la educación, cultura y participación juvenil.
+            </p>
           </div>
         </div>
-      ))}
-    </div>
-  </section>
-</Layout>
+
+        <!-- Slider -->
+        <ImageSlider />
+
+        <!-- Mapa (React-only) -->
+        <AllDevicesMap client:only="react" apiPath="/api/locations" pollInterval={5000} />
+
+        <h2 class="md:text-5xl text-4xl font-bold mt-8 text-center">Falta poco para el CONES</h2>
+        <div class="mt-8">
+          <Countdown client:load />
+        </div>
+
+        <div class="flex justify-center my-8">
+          <a
+            href="https://drive.google.com/file/d/1WgCVjl9BK6jOh9gGutP5RTZ4BytBMhUH/view"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-2xl shadow-md hover:bg-blue-700 transition"
+          >
+            <FaFileAlt class="text-lg" />
+            Ver programa completo
+          </a>
+        </div>
+
+        <!-- Componente con tarjetas clickeables + modal -->
+        <ProgramSchedule client:load />
+
+      </section>
+    </Layout>
+  </body>
+</html>
