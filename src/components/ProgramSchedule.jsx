@@ -459,7 +459,7 @@ se precisen.</li>
             tabIndex={-1}
             ref={dialogRef}
             className={
-              `relative z-50 w-full max-w-3xl mx-auto
+              `z-50 w-full max-w-3xl mx-auto
                bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100
                shadow-2xl p-5 sm:p-8
                transform transition-all duration-300
