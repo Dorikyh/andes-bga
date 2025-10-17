@@ -1,0 +1,12 @@
+---
+import MapaVotaciones from '../components/MapaVotaciones.jsx';
+import Layout from "../layouts/MainLayout.astro";
+---
+
+
+<Layout>
+  <div class="min-h-screen flex flex-col items-center justify-center">
+    <h1 class="text-6xl md:text-7xl font-bold my-6">Mapa de votaciones</h1>
+<MapaVotaciones client:only="react" />
+  </div>
+</Layout>

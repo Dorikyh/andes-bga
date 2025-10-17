@@ -1,0 +1,1266 @@
+{
+  "bucaramanga": [
+    {
+      "codigo": "4665",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE MAIPORE SEDE B",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CLL 17N # 10-38  BARRIO KENNEDY",
+      "lat": 7.152492907619617,
+      "lng": -73.1351184563446
+    },
+    {
+      "codigo": "4666",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE TEC RAFAEL GARCIA HERREROS",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CR 1D # N-81 - BARRIO MINUTO DE DIOS",
+      "lat": 7.148996898109192,
+      "lng": -73.13546061515807
+    },
+    {
+      "codigo": "4667",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE CAFE MADRID",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CR 8B # 35AN-45 BARRIO CAFE MADRID",
+      "lat": 7.1631278,
+      "lng": -73.140431121
+    },
+    {
+      "codigo": "4668",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COLEGIO FE Y ALEGRIA LOS COLORADOS",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CRA 28 A # 49-50 BARRIO COLORADOS",
+      "lat": 7.175609361177481,
+      "lng": -73.1302946805953
+    },
+    {
+      "codigo": "4669",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "SALON COMUNAL  EL PABLON",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CR 11 # 61N-10 BARRIO EL PABLON",
+      "lat": 7.180468,
+      "lng": -73.143123821
+    },
+    {
+      "codigo": "4670",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "CENTRO VIDA KENNEDY",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CRA 12  #  16N - 43  BARRIO KENNEDY",
+      "lat": 7.1523965,
+      "lng": -73.134758421
+    },
+    {
+      "codigo": "4671",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. SANTO ANGEL",
+      "comuna": "01COMUNA 1 NORTE",
+      "direccion": "CLL 9N # 18C - 04 BARRIO VILLA ROSA",
+      "lat": 7.1500159,
+      "lng": -73.1310119
+    },
+    {
+      "codigo": "4672",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "INST DE PROM SOC DEL NORTE SEDE A",
+      "comuna": "02COMUNA 2 NORORIENTAL",
+      "direccion": "CR 22B # 1-61 BARRIO SAN CRISTOBAL",
+      "lat": 7.144370867501204,
+      "lng": -73.12632337938496
+    },
+    {
+      "codigo": "4673",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "ORDEN DE LOS CLERIGOS REG SOMASCOS",
+      "comuna": "02COMUNA 2 NORORIENTAL",
+      "direccion": "CR 26 # 11N-30 BARRIO REGADERO NORTE",
+      "lat": 7.147305701868095,
+      "lng": -73.12354680985578
+    },
+    {
+      "codigo": "4674",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE DAMASO ZAPATA SEDE C",
+      "comuna": "02COMUNA 2 NORORIENTAL",
+      "direccion": "CLL 16N # 24-23 BARRIO VILLA HELENA",
+      "lat": 7.153276070316316,
+      "lng": -73.12682027976226
+    },
+    {
+      "codigo": "4675",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE RURAL BOSCONIA",
+      "comuna": "02COMUNA 2 NORORIENTAL",
+      "direccion": "CRA 32 # 39N-27 BARRIO BOSCONIA",
+      "lat": 7.155016515731267,
+      "lng": -73.112940788269
+    },
+    {
+      "codigo": "4676",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. LA JUVENTUD SEDE A",
+      "comuna": "02COMUNA 2 NORORIENTAL",
+      "direccion": "CLL 5 N # 19 A - 12 BARRIO LA JUVENTUD",
+      "lat": 7.144766651272288,
+      "lng": -73.1283534318207
+    },
+    {
+      "codigo": "4677",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE TEC DAMASO ZAPATA SEDE A",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CLL 10 #28-77",
+      "lat": 7.137723013133202,
+      "lng": -73.11899692233736
+    },
+    {
+      "codigo": "4678",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL FRANCISCANO DEL VIRREY SOL",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CLL 18 # 22-29 BARRIO SAN FRANCISCO",
+      "lat": 7.130599144999998,
+      "lng": -73.1239055799998
+    },
+    {
+      "codigo": "4679",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL SANTANDER SEDE A",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CLL 9  # 25-67 BARRIO LA UNIVERSIDAD",
+      "lat": 7.138658,
+      "lng": -73.122315
+    },
+    {
+      "codigo": "4680",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "SENA - CSET - COLISEO",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CRA 27 # 15-07 BARRIO SAN FRANCISCO",
+      "lat": 7.1336399,
+      "lng": -73.12018992025
+    },
+    {
+      "codigo": "4681",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL AMERICANO",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CR 18  # 19-22  BARRIO SAN FRANCISCO",
+      "lat": 7.128677556530391,
+      "lng": -73.12712508419246
+    },
+    {
+      "codigo": "4682",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE COMUNEROS",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CR 18 # 10-20 BARRIO COMUNEROS",
+      "lat": 7.136078820436345,
+      "lng": -73.1286273524165
+    },
+    {
+      "codigo": "4683",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE CENTRO PILOTO SIMON BOLIVAR",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CR 20 # 11-83 - BARRIO MUTUALIDAD",
+      "lat": 7.135532561113907,
+      "lng": -73.1266200542448
+    },
+    {
+      "codigo": "4684",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL SANTANDER SEDE C",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CLL 5 # 20-14  BARRIO COMUNEROS",
+      "lat": 7.140897983743499,
+      "lng": -73.1276822090147
+    },
+    {
+      "codigo": "4685",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. CLUB UNION SEDE A",
+      "comuna": "03COMUNA 3 SAN FRANCISCO",
+      "direccion": "CLE 3 A # 10 - 36 BARRIO SAN RAFAEL",
+      "lat": 7.1396519,
+      "lng": -73.135067721
+    },
+    {
+      "codigo": "4686",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "INST TEC SALESIANO ELOY VALENZ",
+      "comuna": "04COMUNA 4 OCCIDENTAL",
+      "direccion": "AV QUEBRADA SECA # 11-85 BARRIO GIRARDOT",
+      "lat": 7.121776106695931,
+      "lng": -73.131004186508
+    },
+    {
+      "codigo": "4687",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I. INTEGRADO JORGE ELIECER GAITAN SEDE A",
+      "comuna": "04COMUNA 4 OCCIDENTAL",
+      "direccion": "CLL 16 # 9-54 BARRIO GAITAN",
+      "lat": 7.130505,
+      "lng": -73.1347739999998
+    },
+    {
+      "codigo": "4688",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL FRANCISCO DE PAULA S/DER SEDE A",
+      "comuna": "04COMUNA 4 OCCIDENTAL",
+      "direccion": "CR 5 OCC # 30-61 BARRIO SANTANDER",
+      "lat": 7.119574357088899,
+      "lng": -73.13477813972595
+    },
+    {
+      "codigo": "4689",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL FRANCISCO DE PAULA S/DER SEDE B",
+      "comuna": "04COMUNA 4 OCCIDENTAL",
+      "direccion": "CLL 26 # 2-11 BARRIO LA FERIA",
+      "lat": 7.121695548615504,
+      "lng": -73.1374420970678
+    },
+    {
+      "codigo": "4690",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "CENTRAL DE ABASTOS",
+      "comuna": "04COMUNA 4 OCCIDENTAL",
+      "direccion": "VIA PALENQUE CAFE MADRID # 44 - 96",
+      "lat": 7.103517034728543,
+      "lng": -73.1668424606322
+    },
+    {
+      "codigo": "4691",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE ANDRES PAEZ DE SOTOMAYOR",
+      "comuna": "05COMUNA 5 GARCIA ROVIRA",
+      "direccion": "CLL 37 # 1-97 BARRIO LA JOYA",
+      "lat": 7.112720829070119,
+      "lng": -73.1371235847473
+    },
+    {
+      "codigo": "4692",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL COOPERATIVO DE BUCARAMANGA",
+      "comuna": "05COMUNA 5 GARCIA ROVIRA",
+      "direccion": "CLL 45 # 0-160 BARRIO CAMPO HERMOSO",
+      "lat": 7.107834663276894,
+      "lng": -73.13602276083012
+    },
+    {
+      "codigo": "4693",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE CAMACHO CARREÑO",
+      "comuna": "05COMUNA 5 GARCIA ROVIRA",
+      "direccion": "CLL 41 #8-15 BARRIO ALFONSO LOPEZ",
+      "lat": 7.116481423852123,
+      "lng": -73.13302689977844
+    },
+    {
+      "codigo": "4694",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE CAMPO HERMOSO",
+      "comuna": "05COMUNA 5 GARCIA ROVIRA",
+      "direccion": "CR 9A OCC # 49-24 BARRIO CAMPO HERMOSO",
+      "lat": 7.102670213167366,
+      "lng": -73.13872958262958
+    },
+    {
+      "codigo": "4695",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE JORGE ARDILA DUARTE SEDE A",
+      "comuna": "06COMUNA 6 LA CONCORDIA",
+      "direccion": "CLL 53 # 21-25 BARRIO LA CONCORDIA",
+      "lat": 7.1111295487706165,
+      "lng": -73.11668181097015
+    },
+    {
+      "codigo": "4696",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "INST SAN JOSE DE LA SALLE",
+      "comuna": "06COMUNA 6 LA CONCORDIA",
+      "direccion": "CRR 21 #68-45 BARRIO LA VICTORIA",
+      "lat": 7.099413424376919,
+      "lng": -73.11384547259412
+    },
+    {
+      "codigo": "4697",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL TEC EMPRESARIAL JOSE MARIA",
+      "comuna": "06COMUNA 6 LA CONCORDIA",
+      "direccion": "CLL 51 #13-97 BARRIO SAN MIGUEL",
+      "lat": 7.109234161756131,
+      "lng": -73.1255525350569
+    },
+    {
+      "codigo": "4698",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL AURELIO MARTINEZ MUTIS SEDE B",
+      "comuna": "06COMUNA 6 LA CONCORDIA",
+      "direccion": "CLL 56 # 21-52 BARRIO LA CONCORDIA",
+      "lat": 7.108752414038557,
+      "lng": -73.1159314513206
+    },
+    {
+      "codigo": "4699",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "GIMNASIO SUPERIOR EMPRESARIAL",
+      "comuna": "06COMUNA 6 LA CONCORDIA",
+      "direccion": "CLL 67 # 11-29 BARRIO LA VICTORIA",
+      "lat": 7.097983187374815,
+      "lng": -73.118670310425
+    },
+    {
+      "codigo": "4700",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE SANTA MARIA GORETTI SEDE C",
+      "comuna": "06COMUNA 6 LA CONCORDIA",
+      "direccion": "CLL 65 OCC  # 18 - 08 BARRIO LA VICTORIA",
+      "lat": 7.1013512,
+      "lng": -73.11725621
+    },
+    {
+      "codigo": "4701",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL AURELIO MARTINEZ MUTIS SEDE A",
+      "comuna": "07COMUNA 7 LA CIUDADELA",
+      "direccion": "AV LOS ESTUDIANTES # 9-313 BARRIO REAL DE MINAS",
+      "lat": 7.106144103668549,
+      "lng": -73.12316805967158
+    },
+    {
+      "codigo": "4702",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE NUESTRA SEÑORA DEL PILAR SEDE A",
+      "comuna": "07COMUNA 7 LA CIUDADELA",
+      "direccion": "AV LOS ESTUDIANTES # 9-323 BARRIO REAL DE MINAS",
+      "lat": 7.106700223999999,
+      "lng": -73.1239270399999
+    },
+    {
+      "codigo": "4703",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "UNIDADES TECNOLOGICAS DE SANT",
+      "comuna": "07COMUNA 7 LA CIUDADELA",
+      "direccion": "AV LOS ESTUDIANTES # 9-82 BARRIO REAL DE MINAS",
+      "lat": 7.10475883423022,
+      "lng": -73.12335553134511
+    },
+    {
+      "codigo": "4704",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE NUESTRA SEÑORA DEL PILAR SEDE B",
+      "comuna": "08COMUNA 8 SUR OCCIDENTE",
+      "direccion": "CLL 65C # 6A - 08 BARRIO LOS CANELOS",
+      "lat": 7.098941925408162,
+      "lng": -73.12159641617158
+    },
+    {
+      "codigo": "4705",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE NUESTRA SEÑORA DEL PILAR SEDE E",
+      "comuna": "08COMUNA 8 SUR OCCIDENTE",
+      "direccion": "CR 10C # 68A - 13 BARRIO PABLO VI",
+      "lat": 7.096322594410381,
+      "lng": -73.11923995614033
+    },
+    {
+      "codigo": "4706",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE INEM CUSTODIO GARCIA ROV SEDE H",
+      "comuna": "08COMUNA 8 SUR OCCIDENTE",
+      "direccion": "CLL 67A # 9 - 61 BARRIO BUCARAMANGA",
+      "lat": 7.093821071481757,
+      "lng": -73.12458039759638
+    },
+    {
+      "codigo": "4707",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE LA LIBERTAD",
+      "comuna": "09COMUNA 9 LA PEDREGOZA",
+      "direccion": "CR 31 # 101 - 24 BARRIO LA LIBERTAD",
+      "lat": 7.093327632303575,
+      "lng": -73.10741716833596
+    },
+    {
+      "codigo": "4708",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE INEM CUSTODIO GARCIA ROVIRA SEDE G",
+      "comuna": "09COMUNA 9 LA PEDREGOZA",
+      "direccion": "CR 32 # 87 - 86 BARRIO SAN MARTIN",
+      "lat": 7.0970401000042,
+      "lng": -73.10907840728744
+    },
+    {
+      "codigo": "4709",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL. INTEGRADO JORGE ISAAC",
+      "comuna": "09COMUNA 9 LA PEDREGOZA",
+      "direccion": "CLL 106 No 29-47 BARRIO DIAMANTE I",
+      "lat": 7.09126578901069,
+      "lng": -73.10754126036713
+    },
+    {
+      "codigo": "4710",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE PROVENZA",
+      "comuna": "10COMUNA 10 PROVENZA",
+      "direccion": "CR 23 # 109 - 07 BARRIO PROVENZA",
+      "lat": 7.082825291833034,
+      "lng": -73.1134557723999
+    },
+    {
+      "codigo": "4711",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE INEM CUSTODIO GARCIA ROV SEDE E",
+      "comuna": "10COMUNA 10 PROVENZA",
+      "direccion": "CLL 91 # 25 - 82 BARRIO DIAMANTE II",
+      "lat": 7.088916479341781,
+      "lng": -73.111132979393
+    },
+    {
+      "codigo": "4712",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "JARDIN INFANTIL CASITA DE CHOC",
+      "comuna": "10COMUNA 10 PROVENZA",
+      "direccion": "CR 17C # 90A - 02 BARRIO SAN LUIS",
+      "lat": 7.090824585700715,
+      "lng": -73.1181516498326
+    },
+    {
+      "codigo": "4713",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE INEM CUSTODIO GARCIA ROV SEDE A",
+      "comuna": "10COMUNA 10 PROVENZA",
+      "direccion": "CR 19A # 104 - 56 BARRIO PROVENZA",
+      "lat": 7.085383184496298,
+      "lng": -73.11844193878197
+    },
+    {
+      "codigo": "4714",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL ADVENTISTA LIBERTAD",
+      "comuna": "11COMUNA 11 SUR",
+      "direccion": "CR 15 # 103D - 160 BARRIO DELICIAS ALTAS",
+      "lat": 7.084197397348028,
+      "lng": -73.1227007883853
+    },
+    {
+      "codigo": "4715",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE MEDALLA MILAGROSA",
+      "comuna": "11COMUNA 11 SUR",
+      "direccion": "CR 7B # 103 - 24 BARRIO EL PORVENIR",
+      "lat": 7.085269941440356,
+      "lng": -73.13061974700283
+    },
+    {
+      "codigo": "4716",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE INEM SEDE D",
+      "comuna": "11COMUNA 11 SUR",
+      "direccion": "CRA 15   No 107  63 BARRIO DANGOND",
+      "lat": 7.079283593162667,
+      "lng": -73.12419964574569
+    },
+    {
+      "codigo": "4717",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL DE LAS AMERICAS",
+      "comuna": "12COMUNA 12 CABECERA DEL LLANO",
+      "direccion": "CLL 51 # 24 - 20 BARRIO NUEVO SOTOMAYOR",
+      "lat": 7.113756651213032,
+      "lng": -73.11572203354147
+    },
+    {
+      "codigo": "4718",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL SAN PEDRITO",
+      "comuna": "12COMUNA 12 CABECERA DEL LLANO",
+      "direccion": "CLL 63 # 32 - 76 BARRIO CONUCOS",
+      "lat": 7.107305524538536,
+      "lng": -73.1097522859016
+    },
+    {
+      "codigo": "4719",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL SAN PEDRO CLAVER",
+      "comuna": "12COMUNA 12 CABECERA DEL LLANO",
+      "direccion": "CR 28 # 47 - 06 BARRIO SOTOMAYOR",
+      "lat": 7.117156655524066,
+      "lng": -73.11331657696839
+    },
+    {
+      "codigo": "4720",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "EFORSALUD",
+      "comuna": "12COMUNA 12 CABECERA DEL LLANO",
+      "direccion": "CLL 48 # 27 - 64 BARRIO SOTOMAYOR",
+      "lat": 7.11662322334296,
+      "lng": -73.11461293064097
+    },
+    {
+      "codigo": "4721",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COLEGIO LA PRESENTACION",
+      "comuna": "12COMUNA 12 CABECERA DEL LLANO",
+      "direccion": "CLE 56 # 33 - 38 BARRIO CABECERA DEL LLANO",
+      "lat": 7.109506218241987,
+      "lng": -73.10886419454141
+    },
+    {
+      "codigo": "4722",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "CEN DE SERVICIOS UNIVERSITARIOS CSU UNAB",
+      "comuna": "12COMUNA 12 CABECERA DEL LLANO",
+      "direccion": "CRA 47 N 53 78 BARRIO TERRAZAS",
+      "lat": 7.112428642366093,
+      "lng": -73.10505900859833
+    },
+    {
+      "codigo": "4723",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "ESC NORMAL SUPERIOR SEDE A",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CLL 30 # 27-163 BARRIO AURORA",
+      "lat": 7.127260079305497,
+      "lng": -73.11694800853728
+    },
+    {
+      "codigo": "4724",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "ESC NORMAL SUPERIOR SEDE C",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CLL 30 # 26 - 45 BARRIO ANTONIA SANTOS",
+      "lat": 7.12597279271691,
+      "lng": -73.11934933487336
+    },
+    {
+      "codigo": "4725",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL PSICOPEDAG CARL ROGERS",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CR 25 # 31 - 94 BARRIO ANTONIA SANTOS",
+      "lat": 7.124053596859913,
+      "lng": -73.1195659682553
+    },
+    {
+      "codigo": "4726",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COOP ESPECIALIZ DE EDUC DE COMFENALCO",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CLL 37 #21-34 PARQUE BOLIVAR",
+      "lat": 7.11900454997515,
+      "lng": -73.12060161462269
+    },
+    {
+      "codigo": "4727",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "UNIVERSIDAD COOP DE COLOMBIA",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CLL 30A # 33 - 51 BARRIO QUINTADANIA",
+      "lat": 7.129291784871545,
+      "lng": -73.11267793178557
+    },
+    {
+      "codigo": "4728",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. LAS AMERICAS",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CLL 33 # 36 - 16 BARRIO ALVAREZ",
+      "lat": 7.127162019903582,
+      "lng": -73.110014151494
+    },
+    {
+      "codigo": "4729",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE BICENTENARIO SEDE B",
+      "comuna": "13COMUNA 13 ORIENTAL",
+      "direccion": "CLL 34 # 45 - 38 BARRIO ALVAREZ",
+      "lat": 7.126977657036017,
+      "lng": -73.10711767341216
+    },
+    {
+      "codigo": "4730",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. ORIENTE MIRAFLORES SEDE A",
+      "comuna": "14COMUNA 14 MORRORICO",
+      "direccion": "KM 2 VIA PAMPLONA 50 - 46 BARRIO ALBANIA",
+      "lat": 7.13367238021776,
+      "lng": -73.10514628887175
+    },
+    {
+      "codigo": "4731",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. ORIENTE MIRAFLORES SEDE C",
+      "comuna": "14COMUNA 14 MORRORICO",
+      "direccion": "CL 20 # 53-36 KM 4 VIA PAMPLONA BARRIO MIRAFLORES",
+      "lat": 7.1314707,
+      "lng": -73.103225521
+    },
+    {
+      "codigo": "4732",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE MIRAFLORES SEDE D BUENOS AIRES",
+      "comuna": "14COMUNA 14 MORRORICO",
+      "direccion": "CLL 17 # 57 - 35 BARRIO BUENOS AIRES",
+      "lat": 7.131720188601978,
+      "lng": -73.10130386428521
+    },
+    {
+      "codigo": "4733",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE TECNICO DAMASO ZAPATA SEDE B",
+      "comuna": "14COMUNA 14 MORRORICO",
+      "direccion": "CLL 7A N 38 48 BARRIO VEGAS DE MORRORICO",
+      "lat": 7.137139919959537,
+      "lng": -73.10764455005236
+    },
+    {
+      "codigo": "4734",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "GOBERNACION DE SANTANDER",
+      "comuna": "15COMUNA 15 CENTRO",
+      "direccion": "CLL 37 No 10-36 BARRIO GARCIA ROVIRA",
+      "lat": 7.1164232215749,
+      "lng": -73.1295919418335
+    },
+    {
+      "codigo": "4735",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "CORP UNIVERSITARIA UNICIENCIA",
+      "comuna": "15COMUNA 15 CENTRO",
+      "direccion": "CLL 37 # 11 - 58 BARRIO EL CENTRO",
+      "lat": 7.116575648798229,
+      "lng": -73.12848420960533
+    },
+    {
+      "codigo": "4736",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL NUESTRA SEÑORA DE FATIMA",
+      "comuna": "15COMUNA 15 CENTRO",
+      "direccion": "CR 12 # 41 - 69 BARRIO EL CENTRO",
+      "lat": 7.115232385890139,
+      "lng": -73.12792092561706
+    },
+    {
+      "codigo": "4737",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "INST CALDAS",
+      "comuna": "16COMUNA 16 LAGOS DEL CACIQUE",
+      "direccion": "CIRCUNV 35 # 92 - 135 BARRIO TEJAR MODERNO",
+      "lat": 7.099655002127449,
+      "lng": -73.10332450672527
+    },
+    {
+      "codigo": "4738",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "COL NUESTRA SEÑORA DEL ROSARIO",
+      "comuna": "16COMUNA 16 LAGOS DEL CACIQUE",
+      "direccion": "CR 55 # 72 - 02 BARRIO LAGOS DEL CACIQUE",
+      "lat": 7.104042851328086,
+      "lng": -73.09659902017715
+    },
+    {
+      "codigo": "4739",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "GIMNASIO CAMPESTRE SAN SEBASTIAN",
+      "comuna": "16COMUNA 16 LAGOS DEL CACIQUE",
+      "direccion": "CRA 53 N 73  83 BARRIO LAGOS DEL CACIQUE",
+      "lat": 7.10232312511277,
+      "lng": -73.09881112824208
+    },
+    {
+      "codigo": "4740",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. JOSE CELESTINO MUTIS",
+      "comuna": "17COMUNA 17 MUTIS",
+      "direccion": "CRA 3W # 57 - 14 BARRIO MUITS",
+      "lat": 7.100051590719409,
+      "lng": -73.1314265727995
+    },
+    {
+      "codigo": "4741",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. LUIS CARLOS GALAN SARMIENTO",
+      "comuna": "17COMUNA 17 MUTIS",
+      "direccion": "CLL 59 # 38W - 00 BARRIO ESTORAQUES",
+      "lat": 7.0933145,
+      "lng": -73.1423731
+    },
+    {
+      "codigo": "4742",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "I.E. NUESTRA SEÑORA DEL PILAR SEDE C",
+      "comuna": "17COMUNA 17 MUTIS",
+      "direccion": "CLL 65 CR 11W ESQ BARRIO MONTERREDONDO",
+      "lat": 7.092966413195301,
+      "lng": -73.13293397426604
+    },
+    {
+      "codigo": "4743",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "Ctro Internamiento Preventivo- LA JOYA",
+      "comuna": "",
+      "direccion": "Calle 39 No. 4-36 Barrio la Joya",
+      "lat": 7.114416485512368,
+      "lng": -73.13466783622314
+    },
+    {
+      "codigo": "4744",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "INST NAL PENITEN Y CARCELARIO HOMBRES",
+      "comuna": "",
+      "direccion": "CLL 45 # 6-75 BARRIO CAMPO HERMOSO",
+      "lat": 7.111418999999998,
+      "lng": -73.1321719999998
+    },
+    {
+      "codigo": "4745",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "INST NAL PENITEN Y CARCELARIO MUJERES",
+      "comuna": "",
+      "direccion": "KM 3 VIA CHIMITA PALENQUE",
+      "lat": 7.097911526999999,
+      "lng": -73.1631462999998
+    },
+    {
+      "codigo": "4746",
+      "departamento": "SANTANDER",
+      "municipio": "BUCARAMANGA",
+      "puesto": "IE RURAL VIJAGUAL",
+      "comuna": "18CORREGIMIENTO 1",
+      "direccion": "COL RURAL VIJAGUAL",
+      "lat": 7.205770358067583,
+      "lng": -73.1302821872969
+    }
+  ],
+  "floridablanca": [
+    {
+      "codigo": "4848",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO GABRIELA MISTRAL",
+      "comuna": "01COM1 FLORIDA-CASCO ANTIGUO",
+      "direccion": "CALLE 4 No. 9 - 37 CASCO URBANO",
+      "lat": 7.064049037458727,
+      "lng": -73.08581009353249
+    },
+    {
+      "codigo": "4849",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "POLIDEPORTIVO JOSE ELIAS PUYANA",
+      "comuna": "01COM1 FLORIDA-CASCO ANTIGUO",
+      "direccion": "CALLE 4 No. 11- 37 CASCO URBANO",
+      "lat": 7.064637807701855,
+      "lng": -73.084244040979
+    },
+    {
+      "codigo": "4850",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO JOSE ELIAS PUYANA SEDE A",
+      "comuna": "01COM1 FLORIDA-CASCO ANTIGUO",
+      "direccion": "CALLE 4 No. 11- 79 CASCO URBANO",
+      "lat": 7.064788717999998,
+      "lng": -73.0841552399999
+    },
+    {
+      "codigo": "4851",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO JOSE ELIAS PUYANA SEDE B",
+      "comuna": "01COM1 FLORIDA-CASCO ANTIGUO",
+      "direccion": "CALLE 5 No. 14 -15 ALTAMIRA",
+      "lat": 7.064616512931948,
+      "lng": -73.0823385996947
+    },
+    {
+      "codigo": "4852",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO SANTA TERESITA",
+      "comuna": "01COM1 FLORIDA-CASCO ANTIGUO",
+      "direccion": "CALLE 2 # 3 03 VILLAS DE SAN FRANCISCO",
+      "lat": 7.063572,
+      "lng": -73.09051
+    },
+    {
+      "codigo": "4853",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COL NTRA SRA DEL ROSARIO SEDE PRIMARIA",
+      "comuna": "01COM1 FLORIDA-CASCO ANTIGUO",
+      "direccion": "CALLE 3 No. 5 79 CASCO ANTIGUO",
+      "lat": 7.063819683148941,
+      "lng": -73.0883813214264
+    },
+    {
+      "codigo": "4854",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO REINA DE LA PAZ",
+      "comuna": "02COMUNA 2 CAÑAVERAL-VERSALLES",
+      "direccion": "CALLE 200 No. 20 - 39 LA PAZ",
+      "lat": 7.061488593282526,
+      "lng": -73.0981206543729
+    },
+    {
+      "codigo": "4855",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO NUEVO CAMBRIDGE",
+      "comuna": "02COMUNA 2 CAÑAVERAL-VERSALLES",
+      "direccion": "CALLE 32 No. 22 - 140 CAÑAVERAL",
+      "lat": 7.065482499322405,
+      "lng": -73.1072895808349
+    },
+    {
+      "codigo": "4856",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO PANAMERICANO",
+      "comuna": "02COMUNA 2 CAÑAVERAL-VERSALLES",
+      "direccion": "CALLE 34 #8-73 CAÑAVERAL ALTO",
+      "lat": 7.066763802999974,
+      "lng": -73.0823796223278
+    },
+    {
+      "codigo": "4857",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO VICENTE AZUERO SEDE D RIO FRIO",
+      "comuna": "02COMUNA 2 CAÑAVERAL-VERSALLES",
+      "direccion": "CLL 200 No 15-124 VDA RIO FRIO B. GONZALES CHAP.",
+      "lat": 7.058278276896166,
+      "lng": -73.1026022085981
+    },
+    {
+      "codigo": "4858",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "UNAB CAMPUS EL BOSQUE",
+      "comuna": "02COMUNA 2 CAÑAVERAL-VERSALLES",
+      "direccion": "CALLE 157 No. 19 -55 CAÑAVERAL PARQUE",
+      "lat": 7.071520906781468,
+      "lng": -73.1162814610808
+    },
+    {
+      "codigo": "4859",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO CAMPESTRE GOYAVIER",
+      "comuna": "02COMUNA 2 CAÑAVERAL-VERSALLES",
+      "direccion": "TRANSVERSAL 25 No 1 93 BUENOS AIRES RUITOQUE BAJO",
+      "lat": 7.057149,
+      "lng": -73.089627
+    },
+    {
+      "codigo": "4860",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO CARACOLI",
+      "comuna": "03COMUNA 3 BUCARICA-CARACOLI",
+      "direccion": "TRANSVERSAL ORIENTAL No 01-155",
+      "lat": 7.0697803,
+      "lng": -73.0830342
+    },
+    {
+      "codigo": "4861",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO GABRIEL GARCIA MARQUEZ",
+      "comuna": "03COMUNA 3 BUCARICA-CARACOLI",
+      "direccion": "AVENIDA BUCARICA No. 36-170",
+      "lat": 7.066622757079853,
+      "lng": -73.0823892311924
+    },
+    {
+      "codigo": "4862",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INST RECREACION Y DEPORTE DE FLORIDAB I",
+      "comuna": "03COMUNA 3 BUCARICA-CARACOLI",
+      "direccion": "AV. BUCARICA SECTOR 9 INTERIOR 13 - 15",
+      "lat": 7.067644,
+      "lng": -73.084499
+    },
+    {
+      "codigo": "4863",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO ISIDRO CABALLERO SEDE B",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 117 No. 33-00 LA CASTELLANA",
+      "lat": 7.086005894069947,
+      "lng": -73.1021600829237
+    },
+    {
+      "codigo": "4864",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO ANTONIO JOSE DE SUCRE",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "DIAGONAL 45 No. 114A-35 ZAPAMANGA IV ETAPA",
+      "lat": 7.089855310398324,
+      "lng": -73.0979792861646
+    },
+    {
+      "codigo": "4865",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO SAN BERNARDO",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CARRERA 41 No. 105-07 SAN BERNARDO",
+      "lat": 7.094441511699449,
+      "lng": -73.0978771865571
+    },
+    {
+      "codigo": "4866",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "FRANCISCO JOSE DE CALDAS/INST MINCA SD B",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CARRERA 34 No. 107-52 BARRIO CALDAS",
+      "lat": 7.092404518416423,
+      "lng": -73.1046747234888
+    },
+    {
+      "codigo": "4867",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO JOSE ANTONIO GALAN SEDE A",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 57 No. 14 - 43 EL REPOSO",
+      "lat": 7.092559818534227,
+      "lng": -73.0917933947772
+    },
+    {
+      "codigo": "4868",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO LA TRINIDAD SEDE B",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CARRERA 18B No. 61-55 LA TRINIDAD",
+      "lat": 7.097111039537938,
+      "lng": -73.0950552359413
+    },
+    {
+      "codigo": "4869",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO JOSE ANTONIO GALAN SEDE B",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 58A No 13A -10 LOS ALARES",
+      "lat": 7.093856210263539,
+      "lng": -73.0914758204498
+    },
+    {
+      "codigo": "4870",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO FE Y ALEGRIA",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 113 No 38-26 ZAPAMANGA II",
+      "lat": 7.089899854074461,
+      "lng": -73.100750331423
+    },
+    {
+      "codigo": "4871",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO COMUNITARIO MINCA SEDE A",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 107 No 39 12 ZAPAMANGA I ETAPA",
+      "lat": 7.092822,
+      "lng": -73.100612
+    },
+    {
+      "codigo": "4872",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COL TEC MICROEMPRESARIAL EL CARMEN SED D",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "Calle 51 No. 15 20 Barrio Las Villas",
+      "lat": 7.085575,
+      "lng": -73.088057
+    },
+    {
+      "codigo": "4873",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "SALON COMUNAL EL REPOSO",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 57 No. 14A 07 BARRIO EL REPOSO",
+      "lat": 7.092549,
+      "lng": -73.091811
+    },
+    {
+      "codigo": "4874",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COL. MICROEMPRESARIAL EL CARMEN SEDE B",
+      "comuna": "04COMUNA 4 CALDAS- REPOSO",
+      "direccion": "CALLE 50 No 11-09 BARRIO JOSE A MORALES",
+      "lat": 7.088130425957796,
+      "lng": -73.0888947708465
+    },
+    {
+      "codigo": "4875",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO EL PROGRESO SEDE D",
+      "comuna": "05COMUNA 5 BOSQUE MOLINOS",
+      "direccion": "CARRERA 22 No. 147B- 50 PALOMITAS",
+      "lat": 7.077096852515149,
+      "lng": -73.1114577336441
+    },
+    {
+      "codigo": "4876",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "SALON COMUNAL MOLINOS BAJOS",
+      "comuna": "05COMUNA 5 BOSQUE MOLINOS",
+      "direccion": "CRA 29 FRENTE POLIDEPORTIVO BARRIO MOLINOS BAJOS",
+      "lat": 7.077467270521991,
+      "lng": -73.1059693012671
+    },
+    {
+      "codigo": "4877",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO RAFAEL POMBO",
+      "comuna": "06COMUNA 6 LAGOS BELLAVISTA",
+      "direccion": "CARRERA 6 No. 46-18 LAGOS II",
+      "lat": 7.067223206721148,
+      "lng": -73.0962925461907
+    },
+    {
+      "codigo": "4878",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO CAJASAN",
+      "comuna": "06COMUNA 6 LAGOS BELLAVISTA",
+      "direccion": "CARRERA 8 No. 23-15 LAGOS III",
+      "lat": 7.073896280134634,
+      "lng": -73.0991900514685
+    },
+    {
+      "codigo": "4879",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO VICENTE AZUERO SEDE B",
+      "comuna": "06COMUNA 6 LAGOS BELLAVISTA",
+      "direccion": "CALLE 49 No. 4-73 LAGOS II",
+      "lat": 7.067992451484665,
+      "lng": -73.0931761937479
+    },
+    {
+      "codigo": "4880",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO VICENTE AZUERO SEDE C",
+      "comuna": "06COMUNA 6 LAGOS BELLAVISTA",
+      "direccion": "CARRERA 10 No. 25-12 LAGOS I",
+      "lat": 7.073688676727391,
+      "lng": -73.1020436453838
+    },
+    {
+      "codigo": "4881",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO VICENTE AZUERO SEDE A",
+      "comuna": "06COMUNA 6 LAGOS BELLAVISTA",
+      "direccion": "CALLE 50 No. 2-106 LAGOS II",
+      "lat": 7.068617382157889,
+      "lng": -73.0909662125176
+    },
+    {
+      "codigo": "4882",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO DOMINGO SABIO",
+      "comuna": "07COM. 7 VILLABEL-SANTA ANA",
+      "direccion": "CALLE 14 No. 13-20 VILLABEL",
+      "lat": 7.078592767066862,
+      "lng": -73.103877810968
+    },
+    {
+      "codigo": "4883",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO METROPOLITANO DEL SUR",
+      "comuna": "07COM. 7 VILLABEL-SANTA ANA",
+      "direccion": "AVENIDA 33 No. 117-100 NUEVO VILLABEL",
+      "lat": 7.086120515297317,
+      "lng": -73.1008153616571
+    },
+    {
+      "codigo": "4884",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO MADRE DEL BUEN CONSEJO",
+      "comuna": "07COM. 7 VILLABEL-SANTA ANA",
+      "direccion": "CALLE 19 No. 14-09 CIUDAD VALENCIA",
+      "lat": 7.076486767896852,
+      "lng": -73.1051865855633
+    },
+    {
+      "codigo": "4885",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO METROPOLITANO SANTA ANA",
+      "comuna": "07COM. 7 VILLABEL-SANTA ANA",
+      "direccion": "CARRERA 4 No. 15-11 SANTA ANA",
+      "lat": 7.078221937584639,
+      "lng": -73.0977625833597
+    },
+    {
+      "codigo": "4886",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "SALON COMUNAL CIUDAD VALENCIA",
+      "comuna": "07COM. 7 VILLABEL-SANTA ANA",
+      "direccion": "CARRERA 14 No. 16 20 BARRIO CIUDAD VALENCIA",
+      "lat": 7.077873274330529,
+      "lng": -73.10509560978697
+    },
+    {
+      "codigo": "4887",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO GONZALO JIMENEZ NAVAS",
+      "comuna": "08COMUNA 8 LA CUMBRE- EL CARMEN",
+      "direccion": "CALLE 35 No. 7E-05 LA CUMBRE",
+      "lat": 7.07864872595606,
+      "lng": -73.0897035674249
+    },
+    {
+      "codigo": "4888",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO MICROEMPRESARIAL EL CARME SEDE C",
+      "comuna": "08COMUNA 8 LA CUMBRE- EL CARMEN",
+      "direccion": "CALLE 43 No. 10-07 EL CARMEN",
+      "lat": 7.085513274599584,
+      "lng": -73.0884106338228
+    },
+    {
+      "codigo": "4889",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "INSTITUTO LA CUMBRE",
+      "comuna": "08COMUNA 8 LA CUMBRE- EL CARMEN",
+      "direccion": "CALLE 33 No. 4E-16 LA CUMBRE",
+      "lat": 7.076527027478858,
+      "lng": -73.0902679754545
+    },
+    {
+      "codigo": "4890",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COLEGIO JOSE ELIAS PUYANA SEDE C",
+      "comuna": "08COMUNA 8 LA CUMBRE- EL CARMEN",
+      "direccion": "CALLE 34 No. 9E-91 LA CUMBRE",
+      "lat": 7.079695363571756,
+      "lng": -73.0883627818562
+    },
+    {
+      "codigo": "4891",
+      "departamento": "SANTANDER",
+      "municipio": "FLORIDABLANCA",
+      "puesto": "COL ECOLOGICO DE FLORIDABLANCA SEDE J",
+      "comuna": "11CORREGIMIENTO 3",
+      "direccion": "VEREDA RUITOQUE",
+      "lat": 7.04470409379796,
+      "lng": -73.1126867887976
+    }
+  ]
+}
