@@ -1,12 +1,20 @@
 ---
 import MapaVotaciones from '../components/MapaVotaciones.jsx';
 import Layout from "../layouts/MainLayout.astro";
+import { MdWhereToVote } from "react-icons/md";
 ---
 
 
 <Layout>
   <div class="min-h-screen flex flex-col items-center justify-center">
-    <h1 class="text-6xl md:text-7xl font-bold my-6">Mapa de votaciones</h1>
+    <h1 class="text-6xl md:text-7xl font-bold mt-4 mb-4 ">Mapa de votaciones</h1>
 <MapaVotaciones client:only="react" />
+            <a
+            href="https://wsp.registraduria.gov.co/censocmlj/consultar/"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-2xl shadow-md hover:bg-blue-700 transition md:mr-4 mb-4 md:mb-0 mt-4"
+          >
+            <MdWhereToVote size={25}/>
+            Consulta lugar de votación
+          </a>
   </div>
 </Layout>
