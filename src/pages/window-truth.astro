@@ -1,0 +1,12 @@
+---
+import ChatWidget from '../components/ChatWidget.jsx';
+import Layout from "../layouts/MainLayout.astro";
+
+---
+
+
+<Layout>
+  <div class="min-h-screen flex flex-col items-center justify-center">
+<ChatWidget client:only="react" />
+
+</Layout>
