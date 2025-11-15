@@ -57,9 +57,16 @@ const googleHref = `https://www.google.com/calendar/render?action=TEMPLATE&text=
     <header class="mb-4">
       <h1 class="text-3xl font-bold leading-tight">{title}</h1>
       <div class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
-        {fechaBonita}, {horaInicio}{horaFin ? ` - ${horaFin}` : ``}
-        <div>{location ? <span>{location}</span> : null}</div>
-      </div>
+  {fechaBonita}, {horaInicio}{horaFin ? ` - ${horaFin}` : ``}
+  <div>{location ? <span>{location}</span> : null}</div>
+
+  {excerpt && (
+    <p class="mt-3 text-base text-neutral-700 dark:text-neutral-300">
+      {excerpt}
+    </p>
+  )}
+</div>
+
       
     </header>
 

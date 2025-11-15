@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/MainLayout.astro";
+import { MdFolderOpen, MdImage, MdMenuBook, MdLibraryBooks, MdVideocam, MdAudiotrack, MdWeb } from "react-icons/md";
+---
+
+<Layout>
+  <div class="min-h-screen w-full flex flex-col items-center justify-start py-16 px-4">
+    <h1 class="text-6xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-gray-100">Archivo</h1>
+
+    <p class="max-w-2xl text-center mb-12 text-lg text-gray-700 dark:text-gray-300">
+      Pretendemos construir un archivo documental sólido que conserve y organice el trabajo histórico de la ANDES Santander.
+      Este espacio sirve como una entrada clara a todo lo que hemos recopilado: documentos, registros, imágenes y páginas que cuentan nuestra trayectoria.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full max-w-4xl">
+
+      <!-- Documentos -->
+      <a
+        href="/archivo/documentos"
+        class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition 
+               bg-white dark:bg-gray-800
+               border border-gray-200 dark:border-gray-700"
+      >
+        <MdMenuBook className="mb-3 text-indigo-600 dark:text-indigo-400 text-5xl sm:text-7xl" />
+        <h2 class="text-2xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Documentos</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-center">
+          Actas, informes y materiales escritos que registran nuestro proceso.
+        </p>
+      </a>
+
+      <!-- Imágenes -->
+      <a
+        href="/archivo/imagenes"
+        class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition
+               bg-white dark:bg-gray-800
+               border border-gray-200 dark:border-gray-700"
+      >
+        <MdImage className="mb-3 text-indigo-600 dark:text-indigo-400 text-5xl sm:text-7xl" />
+        <h2 class="text-2xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Imágenes</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-center">
+          Registros visuales y galerías fotográficas de nuestras actividades.
+        </p>
+      </a>
+
+      <!-- Páginas -->
+      <a
+        href="/archivo/paginas"
+        class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition
+               bg-white dark:bg-gray-800
+               border border-gray-200 dark:border-gray-700"
+      >
+        <MdWeb className="mb-3 text-yellow-600 dark:text-yellow-400 text-5xl sm:text-7xl" />
+        <h2 class="text-2xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Páginas</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-center">
+          Versiones guardadas de sitios, contenidos y materiales digitales antiguos.
+        </p>
+      </a>
+      <!-- Audios -->
+      <a
+        href="/archivo/audios"
+        class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition
+               bg-white dark:bg-gray-800
+               border border-gray-200 dark:border-gray-700"
+      >
+        <MdAudiotrack className="mb-3 text-red-600 dark:text-red-400 text-5xl sm:text-7xl" />
+        <h2 class="text-2xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Audios</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-center">
+          Grabaciones de audios, talleres, charlas, etc.
+        </p>
+      </a>
+      <!-- Videos -->
+      <a
+        href="/archivo/videos"
+        class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition
+               bg-white dark:bg-gray-800
+               border border-gray-200 dark:border-gray-700"
+      >
+        <MdVideocam className="mb-3 text-purple-600 dark:text-purple-400 text-5xl sm:text-7xl" />
+        <h2 class="text-2xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Videos</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-center">
+          Videos, tiktoks, de eventos, talleres, vlogs, etc.
+        </p>
+      </a>
+      <!-- Recursos -->
+      <a
+        href="/archivo/recursos"
+        class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition
+               bg-white dark:bg-gray-800
+               border border-gray-200 dark:border-gray-700"
+      >
+        <MdLibraryBooks className="mb-3 text-pink-600 dark:text-pink-400 text-5xl sm:text-7xl" />
+        <h2 class="text-2xl font-semibold mb-1 text-gray-900 dark:text-gray-100">Recursos</h2>
+        <p class="text-gray-600 dark:text-gray-300 text-center">
+          Archivos ajenos a la ANDES pero de importante lectura.
+        </p>
+      </a>
+    </div>
+  </div>
+</Layout>

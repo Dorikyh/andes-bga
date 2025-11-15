@@ -19,10 +19,9 @@ export default function NavBar() {
 
   const menuItems = [
     { label: "Inicio", href: "/" },
-    { label: "Congreso", href: "/congreso" },
     { label: "Actividades", href: "/actividades" },
-    { label: "Propuestas", href: "/propuestas" },
-    { label: "Candidatos", href: "/candidatos" },
+    { label: "Conócenos", href: "/wip" },
+    { label: "Archivo", href: "/archivo" },
   ];
 
   useEffect(() => {
@@ -105,7 +104,9 @@ useEffect(() => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-30">
-      <nav className="max-w-screen-xl mx-auto flex items-center justify-between md:p-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm shadow-sm transition-colors p-4">
+      <nav className="w-full bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm shadow-sm transition-colors">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4 md:p-4">
+
         {/* logo */}
         <a href="/" className="flex items-center gap-3">
           <img src="/icon.svg" alt="ANDES Logo" className="w-56 rounded-md shadow-sm" />
@@ -171,6 +172,7 @@ useEffect(() => {
               </svg>
             )}
           </button>
+        </div>
         </div>
       </nav>
 
