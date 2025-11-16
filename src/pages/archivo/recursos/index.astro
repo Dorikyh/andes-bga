@@ -2,10 +2,49 @@
 import Layout from "../../../layouts/MainLayout.astro";
 import { MdDescription } from "react-icons/md";
 
-const documentos = [
-  { nombre: "Ley 30", url: "https://www.mineducacion.gov.co/1621/articles-86437_Archivo_pdf.pdf" },
-  { nombre: "Tercer Plan Decenal", url: "https://www.mineducacion.gov.co/1780/articles-392871_recurso_1.pdf" },
-  { nombre: "Pedagogía del Oprimido", url: "https://www.servicioskoinonia.org/biblioteca/general/FreirePedagogiadelOprimido.pdf" },
+// Agrupado por categorías
+const categorias = [
+  {
+    titulo: "Educación en Colombia",
+    items: [
+      { nombre: "Ley General de Educación (Ley 115)", url: "https://www.mineducacion.gov.co/1621/articles-85906_archivo_pdf.pdf" },
+      { nombre: "Ley 30 de 1992", url: "https://www.mineducacion.gov.co/1621/articles-86437_Archivo_pdf.pdf" },
+      { nombre: "Tercer Plan Decenal de Educación", url: "https://www.mineducacion.gov.co/1780/articles-392871_recurso_1.pdf" },
+      { nombre: "Balance Segundo Plan Decenal", url: "https://www.mineducacion.gov.co/1780/articles-367350_recurso_1.pdf" },
+      { nombre: "Estatuto Docente 1278 de 2002", url: "https://www.mineducacion.gov.co/1621/articles-86434_archivo_pdf.pdf" },
+    ],
+  },
+  {
+    titulo: "Pedagogía crítica",
+    items: [
+      { nombre: "Pedagogía del Oprimido – Freire", url: "https://www.servicioskoinonia.org/biblioteca/general/FreirePedagogiadelOprimido.pdf" },
+      { nombre: "Educación como práctica de la libertad – Freire", url: "https://www.servicioskoinonia.org/biblioteca/general/FreireEducacionPractica.pdf" },
+      { nombre: "La escuela y la democracia – John Dewey", url: "https://www.filosofia.org/aut/dep/democracia.pdf" },
+      { nombre: "Pedagogía crítica – Peter McLaren (capítulo)", url: "https://www.redalyc.org/pdf/1041/104111710004.pdf" },
+    ],
+  },
+  {
+    titulo: "Derechos Humanos y Educación",
+    items: [
+      { nombre: "Declaración Universal de los DDHH", url: "https://www.un.org/es/about-us/universal-declaration-of-human-rights" },
+      { nombre: "Pacto Internacional DESC", url: "https://www.ohchr.org/sites/default/files/Documents/ProfessionalInterest/cescr_SP.pdf" },
+      { nombre: "Observación General Nº13 – Derecho a la Educación", url: "https://www.ohchr.org/sites/default/files/Documents/HRBodies/GC6_SP.pdf" },
+    ],
+  },
+  {
+    titulo: "Política educativa latinoamericana",
+    items: [
+      { nombre: "UNESCO – Informe GEM Educación", url: "https://unesdoc.unesco.org/search/?sort=latest" },
+      { nombre: "CEPAL – Panorama Social de América Latina", url: "https://www.cepal.org/es/publicaciones" },
+    ],
+  },
+  {
+    titulo: "Pensamiento social latinoamericano",
+    items: [
+      { nombre: "Manifiesto Liminar de Córdoba (1918)", url: "https://iucat.iu.edu/iuk/16076844" },
+      { nombre: "Las venas abiertas – Galeano (fragmentos)", url: "https://www.rebelion.org/docs/30152.pdf" },
+    ],
+  },
 ];
 ---
 
@@ -16,17 +55,28 @@ const documentos = [
       Aquí encontrarás documentos de interés para consulta y lectura.
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-      {documentos.map((doc) => (
-        <a
-          href={doc.url}
-          target="_blank"
-          class="flex flex-col items-center p-6 rounded-2xl shadow hover:shadow-lg transition
-                 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
-        >
-          <MdDescription class="text-6xl sm:text-7xl mb-3 text-indigo-600 dark:text-indigo-400" />
-          <h2 class="text-xl font-semibold mb-1 text-gray-900 dark:text-gray-100 text-center">{doc.nombre}</h2>
-        </a>
+    <div class="w-full max-w-4xl space-y-12">
+      {categorias.map((cat) => (
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">{cat.titulo}</h2>
+
+          <ul class="space-y-2">
+            {cat.items.map((doc) => (
+              <li>
+                <a
+                  href={doc.url}
+                  target="_blank"
+                  class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                >
+                  <MdDescription className="text-indigo-500 text-3xl" />
+                  <span class="text-gray-900 dark:text-gray-100 text-base sm:text-lg leading-snug">
+                    {doc.nombre}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
       ))}
     </div>
   </div>
