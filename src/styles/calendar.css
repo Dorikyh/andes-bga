@@ -4,16 +4,19 @@
 .fc-wrapper {
   padding: 0.25rem;
   border-radius: 0.5rem;
+  max-width: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Base: estiliza elementos .fc sin depender de FullCalendar main.css */
 .fc {
   font-family: inherit;
-  --fc-bg: #ffffff;
+  --fc-bg: #f3f3f3;
   --fc-border: #e6e6e6;
-  --fc-text: #0f172a; /* gray-900 */
+  --fc-text: #1b1b1b; /* gray-900 */
   --fc-muted: #475569; /* gray-600 */
-  --fc-primary: #0ea5a4; /* teal-500 */
+  --fc-primary: #e7c713; /* teal-500 */
+  box-sizing: border-box;
 }
 
 /* Toolbar */
@@ -46,15 +49,32 @@
   font-size: 0.85rem;
   display: flex;
   flex-direction: column;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.2;
+  min-width: 0; /* evita overflow horizontal */
 }
 
 /* Custom content inside event (from renderEventContent) */
+.fc-event-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .fc-event-custom .fc-event-title {
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* permite salto de línea en móvil */
 }
 .fc-event-custom .fc-event-sub {
   font-size: 0.75rem;
   opacity: 0.9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 /* Hover */
@@ -66,11 +86,11 @@
 /* Dark mode overrides: detecta .dark en <html> */
 :root.dark .fc,
 .fc-wrapper.dark-mode .fc {
-  --fc-bg: #0b1220;    /* dark background */
-  --fc-border: #1f2937; /* gray-800 */
-  --fc-text: #e6eef8;   /* light text */
-  --fc-muted: #9aa6b2;  /* gray-400 */
-  --fc-primary: #06b6d4;/* teal-400 brighter for contrast */
+  --fc-bg: #1b1b1b;    /* dark background */
+  --fc-border: #353535; /* gray-800 */
+  --fc-text: #f3f4f6;   /* light text */
+  --fc-muted: #b3b3b3;  /* gray-400 */
+  --fc-primary: #e7c713;/* bright primary for contrast */
 }
 
 /* Dark mode: day cells and text */
@@ -88,11 +108,34 @@
 :root.dark .fc .fc-event,
 .fc-wrapper.dark-mode .fc .fc-event {
   background: var(--fc-primary);
-  color: #041124;
+  color: #181818;
+}
+/* Encabezado de días (Mon, Tue, etc.) */
+.fc .fc-col-header-cell {
+  background-color: var(--fc-bg) !important; /* toma el fondo del calendario */
+  color: var(--fc-muted); /* color de texto */
+  font-weight: 600;
+  border-bottom: 1px solid var(--fc-border);
 }
 
+/* Dark mode */
+.fc-wrapper.dark-mode .fc .fc-col-header-cell,
+:root.dark .fc .fc-col-header-cell {
+  background-color: var(--fc-bg) !important;
+  color: var(--fc-muted);
+}
 /* Responsive tweaks */
 @media (max-width: 640px) {
   .fc .fc-toolbar-title { font-size: 1rem; }
-  .fc .fc-event { font-size: 0.78rem; padding: 0.25rem; }
+  .fc .fc-event {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.3rem;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+  .fc-event-custom .fc-event-title,
+  .fc-event-custom .fc-event-sub {
+    font-size: 0.7rem;
+    line-height: 1.15;
+  }
 }

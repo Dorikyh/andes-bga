@@ -4,6 +4,7 @@ import Calendar from "../components/Calendar.jsx";
 import { getCollection } from "astro:content";
 
 const items = await getCollection("actividades");
+
 const eventos = items
   .filter(i => i.data.published !== false)
   .map(i => ({
@@ -18,7 +19,20 @@ const eventos = items
       excerpt: i.data.excerpt ?? ""
     }
   }))
-  .sort((a,b) => new Date(a.start) - new Date(b.start));
+  .sort((a, b) => new Date(a.start) - new Date(b.start));
+
+const now = new Date();
+
+// Próximos eventos
+const proximos = eventos
+  .filter(e => new Date(e.start) >= now)
+  .slice(0, 8);
+
+// Eventos anteriores
+const anteriores = eventos
+  .filter(e => new Date(e.start) < now)
+  .sort((a, b) => new Date(b.start) - new Date(a.start)) // cronológico inverso
+  .slice(0, 5);
 ---
 <Layout>
   <main class="max-w-5xl mx-auto m-16">
@@ -26,40 +40,71 @@ const eventos = items
 
     <!-- Calendar carga el componente React en cliente -->
     <Calendar client:load events={eventos} />
-	
-<section class="mt-8">
-  <h2 class="text-3xl font-semibold mb-4 dark:text-gray-100">Próximas actividades</h2>
-  <ul class="space-y-3">
-    {eventos
-      .filter(e => new Date(e.start) >= new Date())
-      .slice(0, 8)
-      .map(e => (
-        <li>
-          <a
-            href={e.url}
-            class="block p-4 bg-white dark:bg-neutral-800 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col"
-          >
-            <div class="text-xl md:text-2xl mb-2 font-bold text-primary dark:text-primary">
-              {e.title}
-            </div>
-            <div class="text-sm text-gray-600 dark:text-gray-300">
-              {new Date(e.start).toLocaleString()}
-            </div>
-            {e.extendedProps.location && (
-              <div class="text-sm text-gray-600 dark:text-gray-300">
-                📍 {e.extendedProps.location}
-              </div>
-            )}
-            {e.extendedProps.excerpt && (
-              <p class="mt-2 text-sm text-gray-700 dark:text-gray-400">
-                {e.extendedProps.excerpt}
-              </p>
-            )}
-          </a>
-        </li>
-      ))}
-  </ul>
-</section>
 
+    <!-- Próximas actividades -->
+    <section class="mt-8">
+      <h2 class="text-3xl font-semibold mb-4 dark:text-gray-100">Próximas actividades</h2>
+      <ul class="space-y-3">
+        {proximos.map(e => (
+          <li>
+            <a
+              href={e.url}
+              class="block p-4 bg-white dark:bg-neutral-800 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col"
+            >
+              <div class="text-xl md:text-2xl mb-2 font-bold text-primary dark:text-primary">
+                {e.title}
+              </div>
+              <div class="text-sm text-gray-600 dark:text-gray-300">
+                {new Date(e.start).toLocaleString()}
+              </div>
+              {e.extendedProps.location && (
+                <div class="text-sm text-gray-600 dark:text-gray-300">
+                  📍 {e.extendedProps.location}
+                </div>
+              )}
+              {e.extendedProps.excerpt && (
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-400">
+                  {e.extendedProps.excerpt}
+                </p>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Eventos anteriores -->
+    {anteriores.length > 0 && (
+      <section class="mt-12">
+        <h2 class="text-3xl font-semibold mb-4 dark:text-gray-100">Eventos anteriores</h2>
+        <ul class="space-y-3">
+          {anteriores.map(e => (
+            <li>
+              <a
+                href={e.url}
+                class="block p-4 bg-white dark:bg-neutral-800 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col"
+              >
+                <div class="text-xl md:text-2xl mb-2 font-bold text-primary dark:text-primary">
+                  {e.title}
+                </div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">
+                  {new Date(e.start).toLocaleString()}
+                </div>
+                {e.extendedProps.location && (
+                  <div class="text-sm text-gray-600 dark:text-gray-300">
+                    📍 {e.extendedProps.location}
+                  </div>
+                )}
+                {e.extendedProps.excerpt && (
+                  <p class="mt-2 text-sm text-gray-700 dark:text-gray-400">
+                    {e.extendedProps.excerpt}
+                  </p>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </main>
 </Layout>

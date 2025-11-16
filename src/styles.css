@@ -5,29 +5,15 @@
 /* === Fonts Poppins === */
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
-  font-weight: 900;
+  src: url('/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -40,13 +26,20 @@
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
-  font-weight: 400;
+  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* === Dark Mode Variables === */
+/* === Dark Mode Variables (redundante: el inline <style> ya define variables antes del paint) */
 :root {
   --site-bg: #ffffff;
   --site-text: #161616;
@@ -56,7 +49,6 @@ html.dark {
   --site-text: #f3f4f6;
 }
 
-/* === Base HTML / Body === */
 html, body {
   @apply w-full h-full min-h-screen overflow-x-hidden;
   background-color: var(--site-bg);
@@ -64,7 +56,4 @@ html, body {
   font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 }
 
-/* === Smooth scroll opcional === */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }

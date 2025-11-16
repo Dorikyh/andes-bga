@@ -40,7 +40,7 @@ export default function Calendar({ events }) {
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         headerToolbar={{
-          left: "prev,next today",
+          left: "prev,next",
           center: "title",
           right: "dayGridMonth"
         }}
