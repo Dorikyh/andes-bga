@@ -2,64 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply w-full h-full min-h-screen bg-white dark:bg-neutral-950 overflow-x-hidden;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+/* === Fonts Poppins === */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
-/* === Anti FOLM (Flash of Light Mode) === */
-html { color-scheme: light dark; } /* habilita ambos, se concreta con .dark arriba */
-html.dark { color-scheme: dark; }
-
-/* Candado de transiciones/animaciones mientras se resuelve el tema en el primer frame */
-.no-theme-transition *,
-.no-theme-transition *::before,
-.no-theme-transition *::after {
-  transition: none !important;
-  animation: none !important;
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: fade 0.25s ease;
-}
-
-@keyframes fade {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
-
-/* forced theme variables para evitar flashes si alguna hoja de la nueva página
-   resetea estilos. No interfiere con tus clases Tailwind; solo garantiza
-   fondo y texto base coherentes con html.dark */
+/* === Dark Mode Variables === */
 :root {
   --site-bg: #ffffff;
-  --site-text: #111827;
+  --site-text: #161616;
 }
 html.dark {
-  --site-bg: #0f172a;
+  --site-bg: #161616;
   --site-text: #f3f4f6;
 }
 
-/* aplica variables a las capas base (esto se notará inmediatamente) */
+/* === Base HTML / Body === */
 html, body {
+  @apply w-full h-full min-h-screen overflow-x-hidden;
   background-color: var(--site-bg);
   color: var(--site-text);
+  font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 }
 
-/* helper para forzar repintado momentáneo */
-.theme-refresh {
-  transform: translateZ(0);
+/* === Smooth scroll opcional === */
+html {
+  scroll-behavior: smooth;
 }
-
-.no-theme-transition *, 
-.no-theme-transition *::before, 
-.no-theme-transition *::after {
-  transition: none !important;
-  animation: none !important;
-}
-

@@ -10,10 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          "poppins",
-        ],
-      },
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },      
       colors: {
         primary: {
           50: '#fffbeb',
