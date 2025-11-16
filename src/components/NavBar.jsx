@@ -104,7 +104,7 @@ useEffect(() => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-30">
-      <nav className="w-full bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm shadow-sm transition-colors">
+      <nav className="w-full bg-white/90 dark:bg-neutral-900/80 backdrop-blur-sm shadow-sm transition-colors">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4 md:p-4">
 
         {/* logo */}
@@ -116,14 +116,21 @@ useEffect(() => {
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex items-center gap-6">
             {menuItems.map((m) => (
-              <li key={m.label}>
-                <a
-                  href={m.href}
-                  className="font-semibold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors"
-                >
-                  {m.label}
-                </a>
-              </li>
+<li key={m.label} className="group relative">
+  <a
+    href={m.href}
+    className="font-semibold text-gray-700 dark:text-gray-200 relative inline-block"
+  >
+    {m.label}
+    <span
+      className="absolute left-0 bottom-0 h-[2px] bg-secondary w-full 
+                 scale-x-0 origin-left transform transition-transform duration-900 ease-out
+                 group-hover:scale-x-100"
+    />
+  </a>
+</li>
+
+
             ))}
           </ul>
         </div>
