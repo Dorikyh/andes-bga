@@ -1,0 +1,9 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import EditorIsland from '../../../components/admin/EditorIsland.jsx';
+const { params } = Astro;
+const slug = params.slug;
+---
+<AdminLayout title={`Editar ${slug}`}>
+  <EditorIsland client:load slug={slug} />
+</AdminLayout>

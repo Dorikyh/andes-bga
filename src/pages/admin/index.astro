@@ -1,16 +1,11 @@
 ---
-import AdminApp from "../../components/AdminApp.jsx";
+import AdminLayout from '../../layouts/AdminLayout.astro';
 ---
-
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Admin</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  </head>
-  <body>
-    <!-- importante: client:only para evitar SSR con leaflet -->
-    <AdminApp client:only="react" />
-  </body>
-</html>
+<AdminLayout title="Actividades">
+  <section>
+    <!-- ActivityList es un React island que hace fetch("/api/list") -->
+    <div client:load>
+      <script type="module" src="/src/components/admin/ActivityList.jsx"></script>
+    </div>
+  </section>
+</AdminLayout>

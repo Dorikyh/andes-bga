@@ -4,9 +4,11 @@ import 'dotenv/config';
 const JWT_SECRET = process.env.JWT_SECRET || "dev_secret";
 
 // Cargar usuarios desde la variable de entorno
-const USERS_RAW = process.env.USERS;
+const USERS_RAW = process.env.USERS || "";   // ← evita undefined
 
 function getUsers() {
+  if (!USERS_RAW.trim()) return [];          // ← si no hay usuarios, retorna lista vacía
+
   return USERS_RAW.split(",")
     .map(s => {
       const [user, pass] = s.split(":");
@@ -39,11 +41,16 @@ export function verifyTokenFromReq(req) {
   }
 }
 
-// 🔒 Nueva función para usar en tus endpoints
-export function requireAuth(req) {
-  const user = verifyTokenFromReq(req);
-  if (!user) {
+export function requireAuth(request) {
+  const cookie = request.headers.get("cookie") || "";
+  const match = cookie.match(/(?:^|; )token=([^;]+)/);
+  const token = match ? match[1] : null;
+
+  if (!token) throw new Error("Unauthorized");
+
+  try {
+    return jwt.verify(token, JWT_SECRET);
+  } catch {
     throw new Error("Unauthorized");
   }
-  return user;
 }

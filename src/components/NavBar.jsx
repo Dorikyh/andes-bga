@@ -123,8 +123,8 @@ useEffect(() => {
   >
     {m.label}
     <span
-      className="absolute left-0 bottom-0 h-[2px] bg-secondary w-full 
-                 scale-x-0 origin-left transform transition-transform duration-900 ease-out
+      className="absolute left-0 bottom-0 h-[3px] bg-secondary w-full 
+                 scale-x-0 origin-left transform transition-transform duration-500 ease-out
                  group-hover:scale-x-100"
     />
   </a>
@@ -136,8 +136,8 @@ useEffect(() => {
         </div>
 
         {/* right controls */}
-        <div className="flex items-center gap-3">
-          <div className="hidden md:flex items-center gap-2 text-gray-600 dark:text-gray-300">
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3 text-gray-600 dark:text-gray-300">
             <a href="https://instagram.com/andesantander" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-secondary transition-colors">
               <Instagram width={20} height={20} strokeWidth={2.2} />
             </a>
